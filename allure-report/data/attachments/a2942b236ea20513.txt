@@ -1,0 +1,1 @@
+[32mINFO    [0m root:test_Dashboard.py:329 *******  Verifying Registration page *******

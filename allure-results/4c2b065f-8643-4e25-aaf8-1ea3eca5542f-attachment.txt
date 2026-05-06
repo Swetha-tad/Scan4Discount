@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:104 *******  Verifying Request_Demo_button  *******
+[32mINFO    [0m root:test_Dashboard.py:118 *******  Request Demo button is working fine *******

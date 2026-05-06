@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:196 *******  Verifying Blogs Page  *******
+[32mINFO    [0m root:test_Dashboard.py:205 *******  Blogs page loaded successfully  *******

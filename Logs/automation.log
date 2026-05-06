@@ -1,0 +1,241 @@
+2026-05-03 13:50:42,714 - root - INFO - *******  Test_001_Home  ********
+2026-05-03 13:50:42,715 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-03 13:50:45,164 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-03 13:50:50,132 - root - INFO - *******  Get Started button is working fine *******
+2026-05-03 13:50:56,124 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-03 13:51:02,651 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-03 13:51:11,347 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-03 13:51:20,141 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-04 14:33:18,930 - root - INFO - *******  Test_001_Home  ********
+2026-05-04 14:33:18,931 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-04 14:33:22,754 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-04 14:33:31,315 - root - INFO - *******  Get Started button is working fine *******
+2026-05-04 14:33:39,328 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-04 14:34:09,786 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-04 14:34:44,616 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-04 14:34:56,888 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-04 15:30:08,477 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-04 15:30:35,362 - root - INFO - *******  Blogs page loaded successfully  *******
+2026-05-04 15:33:36,899 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-04 15:33:42,831 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-04 15:34:27,096 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-04 15:34:33,171 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-04 15:37:17,892 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-04 15:37:24,672 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-04 15:41:06,624 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-04 15:41:12,855 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-04 16:55:47,057 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 16:56:17,709 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 16:56:25,749 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 16:56:33,925 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 16:59:20,627 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 16:59:51,089 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 16:59:58,586 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:00:30,030 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:17:16,310 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:17:44,416 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:17:51,076 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:17:57,530 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:21:15,609 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:21:43,561 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:21:50,347 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:21:52,351 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:23:18,096 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:23:25,142 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:23:27,396 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:23:29,473 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:24:35,092 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:25:02,691 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:25:08,479 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:25:36,477 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:26:23,405 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:26:51,947 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:27:19,982 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:27:27,321 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:29:25,499 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:31:33,514 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:32:01,853 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:33:59,241 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:34:29,398 - root - INFO - *******  Form submission successful with In-Valid Data  *******
+2026-05-04 17:34:32,521 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:34:40,640 - root - INFO - *******  Form submission successful with In-Valid Data  *******
+2026-05-04 17:34:43,794 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:35:12,657 - root - INFO - *******  Form submission successful with In-Valid Data  *******
+2026-05-04 17:35:15,776 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:35:23,829 - root - INFO - *******  Form submission successful with In-Valid Data  *******
+2026-05-04 17:36:03,118 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:36:11,134 - root - INFO - *******  Form submission successful with Valid Data  *******
+2026-05-04 17:36:14,259 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:36:22,197 - root - INFO - *******  Form submission successful with Valid Data  *******
+2026-05-04 17:45:00,180 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-04 17:46:34,096 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-04 17:48:47,503 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-04 17:50:30,425 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-04 17:51:38,218 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-04 17:51:42,413 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-04 17:51:43,774 - root - INFO - *******  Verifying Get_Started_button  *******
+2026-05-04 17:52:13,033 - root - INFO - *******  Get Started button is working fine *******
+2026-05-04 17:52:14,575 - root - INFO - *******  Verifying Get_Started_Now_button  *******
+2026-05-04 17:52:22,420 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-04 17:52:23,630 - root - INFO - *******  Verifying Request_Demo_button  *******
+2026-05-04 17:52:51,561 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-04 17:52:53,071 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-04 17:53:29,253 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-04 17:53:30,987 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-04 17:53:38,799 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-04 17:53:40,139 - root - INFO - *******  Verifying Feature Page  *******
+2026-05-04 17:54:09,768 - root - INFO - *******  Features page loaded successfully *******
+2026-05-04 17:54:11,365 - root - INFO - *******  Verifying Pricing Page  *******
+2026-05-04 17:54:22,485 - root - INFO - *******  All subscription plan details captured successfully  *******
+2026-05-04 17:54:23,983 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-04 17:54:30,049 - root - INFO - *******  Blogs page loaded successfully  *******
+2026-05-04 17:54:31,454 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-04 17:54:37,621 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-04 17:54:39,152 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-04 17:55:10,021 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-04 17:55:11,321 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-04 17:55:17,950 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-04 17:55:19,381 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:55:48,830 - root - INFO - *******  Form submission successful with In-Valid Data  *******
+2026-05-04 17:55:54,424 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:56:03,243 - root - INFO - *******  Form submission successful with In-Valid Data  *******
+2026-05-04 17:56:06,683 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:56:39,416 - root - INFO - *******  Form submission successful with In-Valid Data  *******
+2026-05-04 17:56:43,068 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 17:57:15,152 - root - INFO - *******  Form submission successful with In-Valid Data  *******
+2026-05-04 17:57:18,839 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:57:27,374 - root - INFO - *******  Form submission successful with Valid Data  *******
+2026-05-04 17:57:30,967 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 17:58:00,141 - root - INFO - *******  Form submission successful with Valid Data  *******
+2026-05-04 17:58:04,004 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-04 21:31:45,726 - root - INFO - *******  Verifying Registration page *******
+2026-05-04 21:31:53,162 - root - INFO - *******  Verifying Registration page *******
+2026-05-04 21:31:58,156 - root - INFO - *******  Verifying Registration page *******
+2026-05-04 21:34:58,694 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-04 21:35:00,539 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-04 21:35:01,913 - root - INFO - *******  Verifying Get_Started_button  *******
+2026-05-04 21:35:06,143 - root - INFO - *******  Get Started button is working fine *******
+2026-05-04 21:35:07,368 - root - INFO - *******  Verifying Get_Started_Now_button  *******
+2026-05-04 21:35:12,849 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-04 21:35:14,215 - root - INFO - *******  Verifying Request_Demo_button  *******
+2026-05-04 21:35:17,482 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-04 21:35:18,719 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-04 21:35:26,479 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-04 21:35:27,733 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-04 21:35:34,940 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-04 21:35:36,203 - root - INFO - *******  Verifying Feature Page  *******
+2026-05-04 21:35:39,245 - root - INFO - *******  Features page loaded successfully *******
+2026-05-04 21:35:40,450 - root - INFO - *******  Verifying Pricing Page  *******
+2026-05-04 21:35:48,898 - root - INFO - *******  All subscription plan details captured successfully  *******
+2026-05-04 21:35:50,119 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-04 21:35:53,091 - root - INFO - *******  Blogs page loaded successfully  *******
+2026-05-04 21:35:54,324 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-04 21:35:57,248 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-04 21:35:58,500 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-04 21:36:01,480 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-04 21:36:02,710 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-04 21:36:05,769 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-04 21:36:07,045 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 21:36:12,906 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-04 21:36:14,149 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 21:36:20,741 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-04 21:36:21,926 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 21:36:27,593 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-04 21:36:28,762 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 21:36:35,291 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-04 21:36:36,548 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 21:36:42,415 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-04 21:36:43,607 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 21:36:49,258 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-04 21:36:50,485 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-04 21:36:54,903 - root - INFO - *******  Verifying Signup button redirects to Registration page *******
+2026-05-04 21:36:59,057 - root - INFO - *******  Verifying Registration page *******
+2026-05-04 21:37:04,090 - root - INFO - *******  Verifying Registration page *******
+2026-05-04 21:37:10,361 - root - INFO - *******  Verifying Registration page *******
+2026-05-04 22:22:42,789 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-04 22:22:44,816 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-04 22:22:46,089 - root - INFO - *******  Verifying Get_Started_button  *******
+2026-05-04 22:22:49,888 - root - INFO - *******  Get Started button is working fine *******
+2026-05-04 22:22:51,247 - root - INFO - *******  Verifying Get_Started_Now_button  *******
+2026-05-04 22:22:56,130 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-04 22:22:57,624 - root - INFO - *******  Verifying Request_Demo_button  *******
+2026-05-04 22:23:02,970 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-04 22:23:04,839 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-04 22:23:12,274 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-04 22:23:13,552 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-04 22:23:21,490 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-04 22:23:22,833 - root - INFO - *******  Verifying Feature Page  *******
+2026-05-04 22:23:26,444 - root - INFO - *******  Features page loaded successfully *******
+2026-05-04 22:23:27,698 - root - INFO - *******  Verifying Pricing Page  *******
+2026-05-04 22:23:35,450 - root - INFO - *******  All subscription plan details captured successfully  *******
+2026-05-04 22:23:36,774 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-04 22:23:39,860 - root - INFO - *******  Blogs page loaded successfully  *******
+2026-05-04 22:23:41,259 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-04 22:23:44,195 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-04 22:23:45,570 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-04 22:23:49,153 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-04 22:23:50,365 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-04 22:23:53,502 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-04 22:23:54,791 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 22:24:00,374 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-04 22:24:01,845 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 22:24:07,580 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-04 22:24:08,955 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 22:24:14,737 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-04 22:24:15,962 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-04 22:24:21,850 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-04 22:24:23,140 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 22:24:29,103 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-04 22:24:30,341 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-04 22:24:36,131 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-04 22:24:37,449 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-04 22:24:43,092 - root - INFO - *******  Verifying Signup button redirects to Registration page *******
+2026-05-04 22:24:47,319 - root - INFO - *******  Verifying Registration page *******
+2026-05-04 22:24:53,522 - root - INFO - *******  Verifying Registration page *******
+2026-05-04 22:25:00,012 - root - INFO - *******  Verifying Registration page *******
+2026-05-05 10:14:49,564 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-05 10:14:50,679 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-05 10:14:51,762 - root - INFO - *******  Verifying Get_Started_button  *******
+2026-05-05 10:14:55,521 - root - INFO - *******  Get Started button is working fine *******
+2026-05-05 10:14:56,594 - root - INFO - *******  Verifying Get_Started_Now_button  *******
+2026-05-05 10:15:02,025 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-05 10:15:03,093 - root - INFO - *******  Verifying Request_Demo_button  *******
+2026-05-05 10:15:05,900 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-05 10:15:06,987 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-05 10:15:14,781 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-05 10:15:15,888 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-05 10:15:23,442 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-05 10:15:24,526 - root - INFO - *******  Verifying Feature Page  *******
+2026-05-05 10:15:28,005 - root - INFO - *******  Features page loaded successfully *******
+2026-05-05 10:15:29,083 - root - INFO - *******  Verifying Pricing Page  *******
+2026-05-05 10:15:37,020 - root - INFO - *******  All subscription plan details captured successfully  *******
+2026-05-05 10:15:38,118 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-05 10:15:41,547 - root - INFO - *******  Blogs page loaded successfully  *******
+2026-05-05 10:15:42,854 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-05 10:15:46,431 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-05 10:15:47,505 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-05 10:15:50,789 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-05 10:15:51,866 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-05 10:15:54,675 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-05 10:15:55,768 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-05 10:16:02,983 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-05 10:16:04,138 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-05 10:16:09,745 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-05 10:16:10,982 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-05 10:16:16,217 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-05 10:16:17,366 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-05 10:16:22,406 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-05 10:16:23,516 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-05 10:16:28,586 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-05 10:16:29,667 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-05 10:16:36,224 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-05 10:16:37,439 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-05 10:16:40,754 - root - INFO - *******  Signin page loaded successfully  *******
+2026-05-05 10:16:43,758 - root - INFO - *******  Verifying Signup button redirects to Registration page *******
+2026-05-05 10:16:47,732 - root - INFO - *******  SignUp page loaded successfully  *******
+2026-05-05 10:16:49,223 - root - INFO - *******  Verifying Registration page *******
+2026-05-05 10:16:53,865 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-05 10:16:55,379 - root - INFO - *******  Verifying Registration page *******
+2026-05-05 10:17:00,320 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-05 10:17:01,966 - root - INFO - *******  Verifying Registration page *******
+2026-05-05 10:17:06,486 - root - INFO - *******  Registration form Test completed successfully  *******

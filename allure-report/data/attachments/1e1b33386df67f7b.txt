@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:52 *******  Verifying Get_Started_button  *******
+[32mINFO    [0m root:test_Dashboard.py:65 *******  Get Started button is working fine *******

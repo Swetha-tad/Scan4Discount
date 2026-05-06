@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:127 *******  Verifying Email-validation  *******
+[32mINFO    [0m root:test_Dashboard.py:141 *******  Valid Email verification test is successful *******

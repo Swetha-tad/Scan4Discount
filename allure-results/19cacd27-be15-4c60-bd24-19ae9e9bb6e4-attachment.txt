@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:33 *******  Verifying Home Page Title  *******
+[32mINFO    [0m root:test_Dashboard.py:43 *******  Home Page Title test is successful *******

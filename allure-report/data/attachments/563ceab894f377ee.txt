@@ -1,0 +1,1 @@
+[32mINFO    [0m root:test_Dashboard.py:313 *******  Verifying Signup button redirects to Registration page *******

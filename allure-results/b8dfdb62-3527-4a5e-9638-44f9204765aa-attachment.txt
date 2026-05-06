@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:175 *******  Verifying Pricing Page  *******
+[32mINFO    [0m root:test_Dashboard.py:192 *******  All subscription plan details captured successfully  *******

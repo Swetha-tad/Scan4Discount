@@ -1,0 +1,5 @@
+name,email,shop_name,message
+,invalid-email,Store,Missing name
+Jane,jane@invalid,,Invalid email/Missing shop
+Bob,bob@example.com,Bobs Store,
+Alice,alice@example.com,A-Shop,Short

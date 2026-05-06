@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:276 *******  Verifying Form Submission with Valid Data  *******
+[32mINFO    [0m root:test_Dashboard.py:293 *******  Form submission with Valid Data  *******

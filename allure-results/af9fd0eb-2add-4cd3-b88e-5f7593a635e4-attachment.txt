@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:222 *******  Verifying FAQ Page  *******
+[32mINFO    [0m root:test_Dashboard.py:231 *******  FAQs page loaded successfully  *******

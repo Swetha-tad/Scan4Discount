@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:163 *******  Verifying Feature Page  *******
+[32mINFO    [0m root:test_Dashboard.py:172 *******  Features page loaded successfully *******

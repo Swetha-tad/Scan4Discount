@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_Dashboard.py:234 *******  Verifying Contact Us Page  *******
+[32mINFO    [0m root:test_Dashboard.py:243 *******  Contact Us page loaded successfully  *******
