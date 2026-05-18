@@ -1,0 +1,540 @@
+Project Name,Scan4Discount,,,,,,,,,,,,,
+Version,1.3.1,,,,,,,,,,,,,
+Document,TestCases Doc,,,,,,,,,,,,,
+Module Name,Admin Portal,,,,,,,,,,,,,
+Browsers Used,Chrome/Firefox/Edge,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+TC_ID,Module/ Sub module,TS_ID,Test Scenario,Test Case Title,Pre-Condition,Test Steps,Test data,Priority,TestCase type,Expected Result,Actual Result,Status,Bug_ID,Bug_Description
+ TC_REG_001,Application launch,TS_001,User should have access to Registration module,Verify page title,Browser is installed (Chrome/Firefox/Edge),"1) Open browser
+2) Enter application URL
+3) Press Enter",URL: https://test-login.scan4discount.com/in/login,High,Positive,Page loads completely within 5 seconds without errors,"Page displays Username/email field, password field, and login button are visible and enabled",Pass,-,-
+TC_LOGIN_002,Login,TS_002,Verify Admin User login functionality,Verify login with valid credentials,Admin account exists,"1) Launch login URL
+2) Enter valid email ID/username
+3) Enter valid password 
+4) Click login
+","Email ID: admin@gmail.com
+password: admin@123",High,Positive,Admin should login successfully,Login successful and admin dashboard displayed,Pass,-,-
+TC_LOGIN_003,,,,Verify login with invalid password,Admin account exists,"1) Launch login URL
+2) Enter valid email ID/username 
+3) Enter In-valid/wrong password 
+4) Click login
+","Email ID: admin@gmail.com
+password: adm@124",High,Negative,Error message should display,System displays an error message as Invalid credentials,Pass,-,-
+TC_LOGIN_004,,,,Verify login with invalid email,Login page available,"1) Launch login URL
+2) Enter In-valid email ID/username
+3) Enter valid password 
+4) Click login
+","Email ID: admi@mailcom
+password: admin@123",High,Negative,Login should fail,System displays an error message as Invalid credentials,Pass,-,-
+TC_LOGIN_005,,,,Verify login with blank email field,Login page available,"1) Launch login URL
+2) Leave email field empty
+3) Enter valid password 
+4) Click login
+","Email ID: 
+password: admin@123",Medium,Negative,Validation message should appear,A validation message displays to provide required fields,Pass,-,-
+TC_LOGIN_006,,,,Verify login with blank password field,Login page available,"1) Launch login URL
+2) Enter valid email ID/username
+3) Leave password field empty
+4) Click login
+","Email ID: admin@gmail.com
+password:",Medium,Negative,Validation message should appear,A validation message displays to provide required fields,Pass,-,-
+TC_LOGIN_007,,,,Verify login with minimum password length,Password rules configured,"1) Launch login URL
+2) Enter valid email ID/username
+3) Enter 4 length characters
+4) Click login
+","Email ID: admin@gmail.com
+password: admin",Medium,Boundary,System should validate correctly,Displays an error message as the password is Invalid,Pass,-,-
+TC_LOGIN_008,,,,Verify login with maximum password length,Password rules configured,"1) Launch login URL
+2) Enter valid email ID/username
+3) Enter 50 length characters
+4) Click login
+","Email ID: admin@gmail.com
+password: admin35xfrdgr@43gtrhjkk54thhy5567bgfg 4 5t224f",Medium,Boundary,System should reject based on rules,Displays an error message as the password exceeds the minimum characters,Pass,-,-
+TC_LOGIN_009,,,,Verify login with leading/trailing spaces,Admin account exists,"1) Launch login URL
+2) Enter Invalid email ID/username
+3) Enter password with spaces
+4) Click login
+","Email ID: 
+' admin@test.com '
+password:   admin@123  ",Medium,Edge,Spaces should be trimmed properly,Trailing spaces were trimmed but not leading spaces,Fail,BUG_001,System should trim unnecessary spaces
+TC_LOGIN_010,,,,Verify SQL injection in login fields,Login page available,1) Enter SQL query in fields, OR 1=1 --,High,Positive,Application should prevent injection attack,System rejects SQL injection,Pass,-,-
+TC_LOGIN_011,,,,Verify XSS attack in input fields,Login page available,1) Enter script in fields,alert(1),High,Negative,Script execution should be blocked,XSS attack is rejected,Pass,-,-
+TC_LOGIN_012,,,,Verify account lock after multiple failed attempts,Lock policy enabled,"1) Launch login URL
+2) Enter valid email ID/username 
+3) Enter In-valid/wrong password 
+4) Click login multiple times
+","Email ID: admin@gmail.com
+password: admin",Medium,Negative,Account should lock temporarily,Admin user logged In successfully,Fail,BUG_002,Account lock functionality is not added
+TC_LOGIN_013,,,,Verify Remember Me functionality,Admin account exists,"1) Launch login URL
+2) Enter valid email ID/username
+3) Enter valid password 
+4) Select ""Remember Me""
+5) Click login
+","Email ID: admin@gmail.com
+password: admin@123",Low,Edge,User session should persist,"User unable to find ""Remember Me"" function",Fail,BUG_003,This function is not available
+TC_LOGIN_014,,,,Verify Forgot Password link,Email service active,"1) Launch login URL
+2) Click on 'Forgot Password' link
+3) Enter admin user email ID
+4) Click on Send
+","Email ID: admin@gmail.com
+",High,Positive,Reset password page should open,User successfully redirects to forgot password recovery page,Pass,-,-
+TC_LOGIN_015,,,,Verify password reset email delivery,Email configured,"1) Check admin email inbox 
+2) Click on reset password link
+3) Enter new password 
+4) Click on Update
+",password: admin@123456,High,Positive,Reset email should receive successfully,User received email with reset password link,Pass,-,-
+TC_LOGIN_016,,,, Verify session timeout functionality,Admin user logged In,"1) Launch login URL
+2) Enter valid email ID/username
+3) Enter valid password 
+4) Click login
+",N/A,Low,Edge,User should logout automatically,User stays logged in until logout from the system,Fail,BUG_004,User log out works manually
+TC_LOGIN_017,,,,Verify multiple browser sessions,Admin user logged In different browsers,"1) Launch login URL
+2) Enter valid email ID/username
+3) Enter valid password 
+4) Click login
+","Email ID: admin@gmail.com
+password: admin@123",Medium,Edge,Session handling should work properly,User able to login in different bowsers and the data reflects the same,Pass,-,-
+TC_LOGOUT_018,Logout,TS_003,Verify that the Admin User can log out successfully,Verify successful logout,Admin User logged In,"1) Launch login URL
+2) Enter valid email ID/username
+3) Enter valid password 
+4) Click login
+5) Click logout
+","Email ID: admin@gmail.com
+password: admin@123",High,Positive,User should redirect to login page,User lands on login page,Pass,-,-
+TC_LOGOUT_019,,,,Verify back button after logout,Admin User logged out,"1) Click browser back button
+",N/A,High,Positive,User should not access dashboard,System rejects Admin user to login ,Pass,-,-
+TC_DASH_0020,Dashboard,TS_004,"Verify if the Admin User dashboard displays overall platform metrics such as overview, sales, transactions & payments",Verify dashboard loads successfully,Admin User logged In,1) Navigate to Admin dashboard field,N/A,High,Positive,Dashboard should display properly,Dashboard page displays the entire platform metrics ,Pass,-,-
+TC_DASH_0021,,,,Verify sales metrics display,Sales data available,"1) Navigate to Admin dashboard field
+2) Open sales tab",N/A,High,Positive,Correct sales data should display,"Sales tab displays subscription status, genrated revenue by plan, monthly revenue data accurately",Pass,-,-
+TC_DASH_0022,,,,Verify transaction metrics display,Transactions data available,"1) Navigate to Admin dashboard field
+2) Open Transactions tab",N/A,High,Positive,Accurate transactions should display,Transaction tab displays the data and graphical images properly,Pass,-,-
+TC_DASH_0023,,,,Verify payment metrics display,Payment data available,"1) Navigate to Admin dashboard field
+2) Open Payments tab",N/A,High,Positive,Correct payment data should display,Payments data reflects correct results,Pass,-,-
+TC_DASH_0024,,,,Verify filter application across the tabs ,Admin User logged In,"1) Navigate to Admin dashboard field
+2) Open sales tab
+3) Click on all filters and observe the data reflection","Today, 7 days, 30 days, 90 days, Specific date, Cstome date range",Medium,Positive,Data across all filters should reflect accurately,Data doesn’t change across the specific data and custome range,Fail,BUG_005,Overall metrics doesn’t change with custome date filters
+TC_DASH_0025,,,,Verify dashboard when no data available,Empty database,"1) Navigate to Admin dashboard field
+",N/A,Medium,Edge,Empty state should display,System handles empty state gracefully,Pass,-,-
+TC_DASH_0026,,,,Verify Admin can export data,Dashboard accessible,"1) Navigate to Admin dashboard field
+2) Click on Export Data
+",N/A,Medium,Positive,The file should be downloaded in specified format,"System downloads the shop owner details, payment data in correct format",Pass,-,-
+TC_DASH_0027,,,,Verify responsive dashboard UI,Responsive design enabled,"1) Navigate to Admin dashboard field
+",N/A,Low,Positive,UI should adapt properly,System gracefully adapts the application ,Pass,-,-
+TC_DASH_0028,,,,Verify unauthorized dashboard access,User logged out,"1) Navigate to Admin dashboard field
+",N/A,High,Negative,Access should deny,Non admin user doesn’t have access shop owner data,Pass,-,-
+TC_SHOP_029,Add Shop Owner,TS_005,Verify if Admin can add/register new user/shop owner profile,Verify adding shop owner with valid details,"1) Admin user logged In
+2) Admin has access 
+
+
+","1) Navigate to Shop Owners 
+2) Click 'Add New Owner'
+3) Provide all mandatory fields 
+4) Click Next
+5) Choose Subscription plan
+6) Proceed with payment
+","Full Name: John Doe
+Phone Number: 6002023233
+Email: johndoe@gmail.com
+OTP: 325351
+Business Name: The Blossom Store
+City: Hyderabad
+State: Telangana
+Pincode: 500032
+Full Address: Gachibowli, Telecomnagar
+",High,Positive,Shop owner should create successfully,Shop owner added and reflects in the display,Pass,-,-
+TC_SHOP_030,,,,Verify mandatory field validation,"1) Admin user logged In
+2) Admin has access 
+3) Add owner form available
+
+
+","1) Navigate to Shop Owners 
+2) Click 'Add New Owner'
+3) Provide all mandatory fields 
+4) Click Next
+","Full Name: Swapnil
+Phone Number: 6530223233
+City: Hyderabad
+Full Address: Gachibowli, Telecomnagar
+",High,Negative,Validation messages should display,User remains on same page,Pass,-,-
+TC_SHOP_031,,,,Verify duplicate email validation,"1) Admin user logged In
+2) Admin has access 
+3) Existing owner available
+
+
+","1) Navigate to Shop Owners 
+2) Click 'Add New Owner'
+3) Provide all mandatory fields 
+4) Click Next
+","Full Name: John Doe
+Phone Number: 6002023233
+Email: johndoe@gmail.com
+OTP: 325351
+Business Name: The Blossom Store
+City: Hyderabad
+State: Telangana
+Pincode: 500032
+Full Address: Gachibowli, Telecomnagar
+",High,Negative,Duplicate email should reject,Sysem succesfully create the duplication of owner data,Fail,BUG_006,Duplication of shop owner is allowed
+TC_SHOP_032,,,,Verify adding shop owner with Invalid data,"1) Admin user logged In
+2) Admin has access 
+3) Form accessible
+
+
+","1) Navigate to Shop Owners 
+2) Click 'Add New Owner'
+3) Provide all mandatory fields (invalid data for shop owner)
+4) Click Next
+","Full Name: John Doe
+Phone Number: 60020
+Email: johndoe@gmail.com
+OTP: 325351
+Business Name: The Blossom Store
+City: Hyderabad
+State: Telangana
+Pincode: 500032
+Full Address: Gachibowli, Telecomnagar
+",Medium,Negative,Validation error should display,Admin portal accepts invalid data in owner details while creating a shop owner account,Fail,BUG_006,System accepts invalid data in shop owner name field
+TC_SHOP_033,,,,Verify minimum name length,"1) Admin user logged In
+2) Admin has access 
+
+
+","1) Navigate to Shop Owners 
+2) Click 'Add New Owner'
+3) Provide all mandatory fields 
+4) Click Next
+","Full Name: Sw
+Phone Number: 65302
+City: Hyderabad
+Full Address: Gachibowli, Telecomnagar
+",Medium,Negative,System should accept minimum value,System accepts less characters and moves to next page,Fail,BUG_007,Shop owner name field accepts fewer characters than the minimum required
+TC_SHOP_034,,,,Verify maximum name length,"1) Admin user logged In
+2) Admin has access 
+
+
+","1) Navigate to Shop Owners 
+2) Click 'Add New Owner'
+3) Provide all mandatory fields 
+4) Click Next
+","Full Name: S473y2bfesH39gjr837efhhdver387ey
+Phone Number: 65302
+City: Hyderabad
+Full Address: Gachibowli, Telecomnagar
+",Medium,Negative,System should handle correctly,Owner created successfully,Fail,BUG_008,Owner Name field accepts input exceeding 250 characters
+TC_SHOP_035,,,,Verify special characters in input,"1) Admin user logged In
+2) Admin has access 
+
+
+","1) Navigate to Shop Owners 
+2) Click 'Add New Owner'
+3) Provide all mandatory fields 
+4) Click Next
+","Full Name: S473y2bfesH3+=/*+9gjr8_____y
+Phone Number: 65302
+City: Hyderabad
+Full Address: Gachibowli, Telecomnagar
+",Medium,Edge,Validation should work properly,System displays validation error message to provide correct data,Pass,-,-
+TC_SHOP_036,,TS_006,Verify if shop owner received an email with registration details,Verify registration email sent,Email service active,"1) Check Shop Owner registerd email 
+2) Click on reset password 
+
+",N/A,Medium,Positive,Email should receive successfully,Shop owner receives the activation/welcome email,Pass,-,-
+TC_SHOP_037,,,,Verify email failure handling,Email service disabled,"1) Check Shop Owner registerd email 
+2) Click on reset password 
+
+",N/A,Medium,Negative,Proper error should display,Validation error message displayed correctly,Pass,-,-
+TC_SHOP_038,,TS_007,Validate the QR code successfully generated or not,Verify QR generation after registration,1) Shop Owner account exists,1) Verify if Shop Owner received QR code after store creation,N/A,High,Positive,QR should generate successfully,"QR generation successfully, email was sent to customer",Pass,-,-
+TC_SHOP_039,Shop Owners,TS_008,Verify if Admin can Manage and track registered user/shop owner details,Verify shop owners list displays,1) Shop Owner account exists,"1) Navigate to Shop Owners dashboard
+2) View the shop owner details in the display
+",N/A,High,Positive,List should load correctly,Shop Owner data displays properly,Pass,-,-
+TC_SHOP_040,,,,Verify edit shop owner details,1) Shop Owner account exists,"1) Navigate to Shop Owners dashboard
+2) Click on Edit button
+3) Update the Owner name and Business name fields
+4) Click on Save
+","Full Name: John Smith
+Business Name: Blossom Store",High,Positive,Details should update successfully,Shop owner details updates and displays in list,Pass,-,-
+TC_SHOP_041,,,,Verify delete shop owner,1) Shop Owner account exists,"1) Navigate to Shop Owners dashboard
+2) Select the shop owner details
+3) Click on delete button
+4) Confirm delete to proceed
+",N/A,High,Positive,Record should remove successfully,Shop owner data removed successfully,Pass,-,-
+TC_SHOP_042,,,,Verify delete confirmation popup,1) Shop Owner account exists,"1) Navigate to Shop Owners dashboard
+2) Select the shop owner details
+3) Click on delete button
+4) Confirm delete to proceed
+",N/A,Medium,Positive,Confirmation should display,Delete confirmatio pop displayed successfully,Pass,-,-
+TC_SHOP_043,,,,Verify unauthorized edit attempt,1) Non-admin logged in,"1) Navigate to Shop Owners dashboard
+2) Naviagate to Profile Info
+",N/A,High,Negative,Access should deny,Non admin user unable to access shop owner info,Pass,-,-
+TC_SHOP_044,,,,Verify large record loading,1) Large data exists,"1) Navigate to Shop Owners dashboard
+2) View the shop owner details in the display
+",N/A,Medium,Edge,Page should load efficiently,System gracefully accepts the large data,Pass,-,-
+TC_SHOP_045,,TS_009,Verify the search functionality with the application of filters,Verify search functionality,1) Shop Owner accounts records exists,"1) Navigate to Shop Owners dashboard
+2) Enter valid name/emai/phone/business name
+",Phone:7687676768,High,Positive,Correct results should display,Valid search keyword matches the data accurately,Pass,-,-
+TC_SHOP_046,,,,Verify filter functionality,1) Shop Owner accounts records exists,"1) Navigate to Shop Owners dashboard
+2) Click on Active or Inactive or Pending filter button to display the status
+",N/A,Medium,Positive,Filtered records should display,Data filters out according to the filters,Pass,-,-
+TC_SHOP_047,,,,Verify sorting functionality,1) Shop Owner accounts records exists,"1) Navigate to Shop Owners dashboard
+2) Sort columns by various filters
+",N/A,Medium,Positive,Data should sort correctly,System displays the sorted data successfully,Pass,-,-
+TC_SHOP_048,,,,Verify pagination,More than one page exists,"1) Navigate to Shop Owners dashboard
+2) Click on relevant pages",N/A,Medium,Positive,Pagination should work properly,Pagination works correctly,Pass,-,-
+TC_SALES_049,Sales Agents,TS_010,Verify if Admin can create Sales Agent profile,Verify adding sales agent,"1) Admin user logged In
+2) Admin has access 
+
+
+","1) Navigate to Shop Owners dashboard
+2) Go to Sales Agents tab
+3) Click on 'Add Agent' button
+4) Provide all mandatory fields
+5) Click on Create
+","Full Name: Karthik
+Email: karthikgopanna@gmail.com
+Phone Number: 8651664512
+Commission Percentage: 2
+ 
+",High,Positive,Agent should create successfully,Sales agent added successfully,Pass,-,-
+TC_SALES_050,,,,Verify invalid email validation,"1) Admin user logged In
+2) Admin has access 
+
+
+","1) Navigate to Shop Owners dashboard
+2) Go to Sales Agents tab
+3) Click on 'Add Agent' button
+4) Provide invalid email ID
+5) Click on Create
+","Full Name: Manasa
+Email: man@gm
+Phone Number: 8651664512
+Commission Percentage: 2
+ 
+",Medium,Negative,Validation should display,Sales Agent account can be created with only numerics in the Name field,Fail,BUG_009,"While creating a Sales Agent account, the Name field accepts invalid input data instead of enforcing proper validation."
+TC_SALES_051,,,,Verify duplicate sales agent,Sales agent data already exists,"1) Navigate to Shop Owners dashboard
+2) Go to Sales Agents tab
+3) Click on 'Add Agent' button
+4) Provide all mandatory fields
+5) Click on Create
+","Full Name: Karthik
+Email: karthikgopanna@gmail.com
+Phone Number: 8651664512
+Commission Percentage: 2
+ 
+",High,Negative,Duplicate should reject,System displays validation error message ,Pass,-,-
+TC_SALES_052,,TS_011,Validate the welcome email verification with registered login credentials ,Verify welcome email sent,Email service active,"1) Verify if sales agent received an welcome email with credentials
+",N/A,Medium,Positive,Email should receive successfully,Sales agent received welcome email,Pass,-,-
+TC_SALES_053,,TS_012,Verify if Admin can View and Manage the sales agents info,Verify sales agent list display,Sales Agents data exist,"1) Navigate to Shop Owners dashboard
+2) Go to Sales Agents tab
+",N/A,High,Positive,List should display properly,Sales Agent data reflects in the display correctly,Pass,-,-
+TC_SALES_054,,,,Verify edit sales agent,Sales Agents data exist,"1) Navigate to Shop Owners dashboard
+2) Go to Sales Agents tab
+3) Click on Edit button
+4) Provide all mandatory fields
+5) Click on Create
+","Full Name: Hussain
+Email: hussainshaik@gmail.com
+Phone Number: 8652562210
+Commission Percentage: 1
+ 
+",High,Positive,Details should update successfully,System displays success message as the sales agent updated successfully,Pass,-,-
+TC_SALES_055,,,,Verify delete sales agent,Sales Agents data exist,"1) Navigate to Shop Owners dashboard
+2) Go to Sales Agents tab
+3) Click on Delete button
+",N/A,Medium,Positive,Record should delete successfully,Sales Agent deletes and the count has been updated,Pass,-,-
+TC_SALES_056,,,,Verify restricted access,Unauthorized user exists,1) Try accessing sales agent data,N/A,High,Negative,Unauthorized access should block,Non admin user doesn’t have access to sales agent data,Pass,-,-
+TC_SALES_057,,,,Verify UI responsiveness,Responsive design enabled,1) Resize the screen,N/A,Low,Edge,Layout should display correctly,Form fits the screen properly,Pass,-,-
+TC_ANALYTICS_58,Analytics / Platform Analytics,TS_013,Verify whether the Analytics dashboard displays overview of entire platform,Verify analytics dashboard load,Entire platform Analytics data available,"1) Log in as admin User
+2) Navigate to Analytics tab",N/A,High,Positive,Dashboard should display properly,System displays platoform analytics results,Pass,-,-
+TC_ANALYTICS_59,,,,Verify revenue analytics,Revenue data exists,"1) Log in as admin User
+2) Navigate to Analytics tab, Observe the revenue metrics card on the top of the page",N/A,High,Positive,Revenue data should match system,Revenue data reflects across filters displays accurately,Pass,-,-
+TC_ANALYTICS_60,,,,Verify transaction analytics,Transactions data available,"1) Navigate to Analytics tab
+2) Observe the transaction summary card",N/A,High,Positive,Correct analytics should display,Overall platform analytics displays correct data,Pass,-,-
+TC_ANALYTICS_61,,,,Verify graph performance with data validation,Graph images exists,"1) Navigate to Analytics tab
+2) Observe the graph data matches with monthly revenue and transactions",N/A,Medium,Positive,Export should work correctly,Graphical interpretation renders fine,Pass,-,-
+TC_ANALYTICS_62,,,,Verify date range filter,Date range filters exists,"1) Navigate to Analytics tab
+2) Observe the platform performance metrics across the filters","7 days, 30 days, 90 days",Medium,Positive,Correct data should display,"Platform analytics data does not update after applying 7 Days, 30 Days, or 90 Days filters",Fail,BUG_010,"On the Platform Analytics page, applying date-based filters such as 7 Days, 30 Days, and 90 Days does not change the displayed analytics data. "
+TC_ANALYTICS_63,,,,Verify analytics with huge data,Large data exists,"1) Navigate to Analytics tab
+2) Observe the platform Analytics page",N/A,Medium,Edge,System should not crash,System gracefully handles the large data sets,Pass,-,-
+TC_ANALYTICS_64,,,,Verify analytics response time,Analytics enabled,"1) Navigate to Analytics tab
+2) Observe the platform Analytics page loading/respond time",N/A,Medium,Negative,Reports should load efficiently,System displays Analytics data in no time,Pass,-,-
+TC_QR MANAGE_65,Generate QRs/QR management,TS_014,Verify if Admin can Generate and manage QR codes,Verify QR generation,QR module enabled,"1) Navigate to QR management page
+2) Click on generate button",N/A,High,Positive,QR should generate successfully,QR generation successful,Pass,-,-
+TC_QR MANAGE_66,,,,Verify QR download option,QR generated ,"1) Navigate to QR management page
+2) View the generated QR code and click on the download button
+",N/A,Medium,Positive,QR should download properly,QR downloaded in correct format,Pass,-,-
+TC_QR MANAGE_67,,,,Verify QR scan functionality,QR generated ,"1) Navigate to QR management page
+2) View the generated QR code and scan the QR code
+",N/A,High,Positive,QR should redirect correctly,Admin cannot create shop owner account using an unassigned QR code after QR generation,Fail,BUG_011,"After generating a QR code, the admin is unable to create a shop owner account using an unassigned QR code"
+TC_QR MANAGE_68,,,,Verify bulk QR generation,Bulk feature enabled,"1) Navigate to QR management page
+2) Generate bulk QR codes
+",N/A,Medium,Edge,Bulk generation should succeed,System gracefully handles bulk QR generation,Pass,-,-
+TC_QR MANAGE_69,,,,Verify clicking on PNG button downloads directly,QR generated ,"1) Navigate to QR management page
+2) Click on PNG button to download
+",N/A,Medium,Edge,Validation should display,Clicing on PNG button downloads the QR image,Pass,-,-
+TC_QR MANAGE_70,,,,Verify QR generation speed,QR service active,"1) Navigate to QR management page
+2) Click on generate button",N/A,Medium,Edge,QR should generate quickly,QR generates in no time,Pass,-,-
+TC_BLOGS_71,Blogs management,TS_015,Verify if Admin user can Manage blog content,Verify add blog functionality,Admin logged in,"1) Navigate to Blogs management page
+2) Click on add button 
+3) Provide all manatory fields
+4) Click on Create","Title: How to Use
+Content: Scan, Save and Smile",Medium,Positive,Blog should add successfully,Blog created successfully,Pass,-,-
+TC_BLOGS_72,,,,Verify edit blog,Blog data already exists,"1) Navigate to Blogs management page
+2) Click on Edit button 
+3) Provide all manatory fields
+4) Click on Update button","Title: How to Use
+Content: Customer scans the QR code, and enter purchase amount, Gets an instant discount",Medium,Positive,Blog should update successfully,Blog updates in the system,Pass,-,-
+TC_BLOGS_73,,,,Verify delete blog,Blog data already exists,"1) Navigate to Blogs management page
+2) Click on Delete button 
+",N/A,Medium,Positive,Blog should delete successfully,Blog record removed from the data,Pass,-,-
+TC_BLOGS_74,,,,Verify blank blog title validation,Admin logged in,"1) Navigate to Blogs management page
+2) Leave mandatory fields empty
+",N/A,Low,Negative,Validation should display,System displays validation error message to fill the required fields,Pass,-,-
+TC_BLOGS_75,,,,Verify image upload in blog,Admin logged in,"1) Navigate to Blogs management page
+2) Click on add button 
+3) Provide all manatory fields and upload valid image format
+4) Click on Create",N/A,Medium,Positive,Image should upload successfully,System accepts the valid image format within the specified data range,Pass,-,-
+TC_FAQs_76,FAQs management,TS_016,Verify if Admin user can Manage FAQs content,Verify add FAQ functionality,Admin logged in,"1) Navigate to FAQs management page
+2) Click on add button 
+3) Provide all manatory fields 
+4) Click on Create","Question: 
+Do customers need to create an account to use it?
+Answer: No, customers can scan QR codes and view offers without creating an account.",Medium,Positive,FAQ should add successfully,FAQ created successfully,Pass,-,-
+TC_FAQs_77,,,,Verify edit FAQ,FAQs data exists,"1) Navigate to FAQs management page
+2) Click on Edit button 
+3) Provide all manatory fields 
+4) Click on Create","Question: 
+Do customers need to create an account to use it?
+Answer: No, customers can scan QR codes and view offers without creating an account.",Medium,Positive,FAQ should update successfully,FAQ record updates in the system,Pass,-,-
+TC_FAQs_78,,,,Verify delete FAQ,FAQs data exists,"1) Navigate to FAQs management page
+2) Click on Delete button 
+",N/A,Medium,Positive,FAQ should delete successfully,FAQ records is removed from the data,Pass,-,-
+TC_FAQs_79,,,,Verify blank FAQ validation,Admin logged in,"1) Navigate to FAQs management page
+2) Click on add button 
+3) Leave all manatory fields 
+4) Click on Create",N/A,Low,Negative,Validation should display,System displays validation error message,Pass,-,-
+TC_SUB_80,Subscription Plans,TS_017,Verify if Admin can manage subscription plan ,Verify add subscription plan,Admin logged in,"1) Navigate to Subscription plan page
+2) Click on add button 
+3) Fill all manatory fields 
+4) Click on Create","Basic Plan
+BASIC
+
+Perfect for small businesses
+
+? 399.00 / month
+
+Quarterly: 999.00
+
+Yearly: 1999.00
+
+? 2 - Stores
+? QR Discount Campaigns
+? Customer Analytics
+? Unlimited Scans
+? Multi-Store Support
+? Real-Time Dashboard
+? Employee Management
+? Pass Management
+? Digital Khatha System
+? Discount Redemption Tracking
+? Customer Visit Tracking
+? Business Reports",High,Positive,Plan should create successfully,Subscription plan added successfully,Pass,-,-
+TC_SUB_81,,,,Verify edit subscription plan,Subscription plan data exists,"1) Navigate to Subscription plan page
+2) Click on Edit button 
+3) Update the changes
+4) Click on Save/Update","Standard Plan
+STD-001
+
+A balanced plan for growing businesses requiring essential features.
+
+? 899.00 / month
+
+Quarterly: 2199.00
+
+Yearly: 3199.00
+
+? 5 - Stores
+? QR Discount Campaigns
+? Customer Analytics
+? Unlimited Scans
+? Multi-Store Support
+? Real-Time Dashboard
+? Employee Management
+? Pass Management
+? Digital Khatha System
+? Discount Redemption Tracking
+? Customer Visit Tracking
+? Business Reports",High,Positive,Plan should update successfully,Plan info updates successfully,Pass,-,-
+TC_SUB_82,,,,Verify delete subscription plan,Subscription plan data exists,"1) Navigate to Subscription plan page
+2) Click on Delete button 
+",N/A,High,Positive,Plan should delete successfully,Subscription plan deletes ,Pass,-,-
+TC_SUB_83,,,,Verify delete confirmation popup,Subscription plan data exists,"1) Navigate to Subscription plan page
+2) Click on Delete button 
+",N/A,High,Positive,System should display confirmation pop-up notification,Confirmation pop up button is not available,Fail,BUG_012,System deletes the subscription plan directly
+TC_SUB_84,,,,Verify maximum subscription amount,Subscription plan data exists,"1) Navigate to Subscription plan page
+2) Click on Edit button 
+3) Update the changes (Enter maximum amount)
+4) Click on Save/Update","Premium Plan
+PREM-002
+
+Advanced features for high-volume users requiring scale and dedicated support.
+
+? 1899.00 / month
+
+Quarterly: 2899.00
+
+Yearly: 3999.00
+
+",Medium,Negative,System should handle properly,System rejects the invalid data,Pass,-,-
+TC_SUB_85,,,,Verify negative pricing value,Subscription plan data exists,"1) Navigate to Subscription plan page
+2) Click on Edit button 
+3) Update the changes (Enter negative amount)
+4) Click on Save/Update","
+? -899.00 / month
+
+",High,Negative,Validation should reject,System displays validation error message,Pass,-,-
+TC_SUB_86,,,,Verify active/inactive status toggle,Subscription plan data exists,"1) Navigate to Subscription plan page
+2) Click on Edit button 
+3) Update the changes (Change the status)
+4) Click on Save/Update",N/A,Medium,Positive,Status should update correctly,Status updates accordingly,Pass,-,-
+TC_SUB_87,,,,Verify unauthorized modification,Non-admin logged in,1) User doesn’t have access to the subscription plan,N/A,High,Edge,Access should deny,Non admin user uanble to access the subcription data,Pass,-,-
+TC_USER_88,Admin User Management ,TC_018,Verify if Admin can Manage system administrators,Verify add admin user,"Admin logged in
+Admin has access to it","1) Navigate to User Management
+2) Click on Add button
+3) Provide all mandatory fields
+4) Click on Create
+","Full Name: Admin User
+Email: sysadmin@scan4discount.com
+Phone Number: 8546545458
+Password: dhesbfe_#403
+",High,Positive,Admin should create successfully,Admin created one more user successfully,Pass,-,-
+TC_USER_89,,,,Verify edit admin user,Admin User exists,"1) Navigate to User Management
+2) Click on Edit button
+3) Provide all mandatory fields
+4) Click on Update
+","Full Name: Admin User
+Email: sysadmin@scan4discount.com
+Phone Number: 8546546856
+Password: dhesbf565_=3
+",High,Positive,Details should update successfully,Main Admin updates the admin user data,Pass,-,-
+TC_USER_90,,,,Verify delete admin user,Admin User exists,"1) Navigate to User Management
+2) Click on Delete button
+",N/A,High,Positive,Admin should delete successfully,Admin record removes from the system,Pass,-,-
+TC_USER_91,,,,Verify duplicate admin email,Admin User exists,"1) Navigate to User Management
+2) Click on Add button
+3) Provide all mandatory fields
+4) Click on Create
+","Full Name: Admin User
+Email: sysadmin@scan4discount.com
+Phone Number: 8546545458
+Password: dhesbfe_#403
+",Medium,Negative,Validation should display,System doesn’t allow the duplication record,Pass,-,-
+TC_USER_92,,,,Verify role-based permissions,Admin has access to add another admin,"1) Navigate to User Management
+2) Click on Add button
+3) Provide all mandatory fields
+4) Click on Create
+","Full Name: fwjafnw
+Email: sysadmin@scan4discount.com
+Phone Number: 8546545458
+Password: dhesbfe_#403
+",High,Edge,Permissions should work correctly,Only main Admin has the access to this data,Pass,-,-
+TC_USER_93,,,,Verify unauthorized admin access,Non-admin logged in,1) User doesn’t have access to the Admin data,N/A,High,Edge,Access should deny,Non admin user cannot access this data,Pass,-,-
+TC_USER_94,,,,Verify forced logout after role removal,Admin logged in,1) Remove the rule,N/A,Medium,Edge,User should logout immediately,,Pass,-,-

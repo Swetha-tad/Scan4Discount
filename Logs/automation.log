@@ -239,3 +239,531 @@
 2026-05-05 10:17:00,320 - root - INFO - *******  Registration form Test completed successfully  *******
 2026-05-05 10:17:01,966 - root - INFO - *******  Verifying Registration page *******
 2026-05-05 10:17:06,486 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-06 10:35:23,068 - root - INFO - *******  Verifying Watch Demo button  *******
+2026-05-06 10:35:29,469 - root - INFO - *******  Watch Demo button is working fine *******
+2026-05-06 10:50:31,640 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-06 10:50:35,545 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-06 10:50:37,131 - root - INFO - *******  Verifying Watch Demo button  *******
+2026-05-06 10:50:43,836 - root - INFO - *******  Watch Demo button is working fine *******
+2026-05-06 10:50:45,299 - root - INFO - *******  Verifying Get_Started_button  *******
+2026-05-06 10:50:51,149 - root - INFO - *******  Get Started button is working fine *******
+2026-05-06 10:50:52,530 - root - INFO - *******  Verifying Get_Started_Now_button  *******
+2026-05-06 10:51:19,134 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-06 10:51:20,394 - root - INFO - *******  Verifying Request_Demo_button  *******
+2026-05-06 10:51:47,467 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-06 10:51:48,797 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-06 10:52:19,276 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-06 10:52:20,531 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-06 10:52:30,518 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-06 10:52:32,040 - root - INFO - *******  Verifying Feature Page  *******
+2026-05-06 10:52:38,345 - root - INFO - *******  Features page loaded successfully *******
+2026-05-06 10:52:39,867 - root - INFO - *******  Verifying Pricing Page  *******
+2026-05-06 10:53:12,121 - root - INFO - *******  All subscription plan details captured successfully  *******
+2026-05-06 10:53:13,423 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-06 10:53:17,202 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-06 10:53:43,578 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-06 10:53:44,887 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-06 10:54:11,245 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-06 10:54:12,543 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-06 10:54:39,631 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-06 10:54:40,972 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-06 10:54:49,081 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-06 10:55:18,726 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-06 10:55:27,687 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-06 10:55:36,406 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-06 10:56:08,020 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-06 10:56:16,988 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-06 10:56:50,682 - root - INFO - *******  Signin page loaded successfully  *******
+2026-05-06 10:56:52,526 - root - INFO - *******  Verifying Signup button redirects to Registration page *******
+2026-05-06 10:56:57,761 - root - INFO - *******  SignUp page loaded successfully  *******
+2026-05-06 10:56:59,921 - root - INFO - *******  Verifying Registration page *******
+2026-05-06 10:57:29,336 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-06 10:57:30,834 - root - INFO - *******  Verifying Registration page *******
+2026-05-06 10:57:40,015 - root - INFO - *******  Verifying Registration page *******
+2026-05-06 10:57:46,559 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-06 11:05:28,375 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-06 11:05:31,969 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-06 11:05:33,248 - root - INFO - *******  Verifying Watch Demo button  *******
+2026-05-06 11:06:01,030 - root - INFO - *******  Watch Demo button is working fine *******
+2026-05-06 11:06:02,291 - root - INFO - *******  Verifying Get_Started_button  *******
+2026-05-06 11:06:40,729 - root - INFO - *******  Get Started button is working fine *******
+2026-05-06 11:06:41,813 - root - INFO - *******  Verifying Get_Started_Now_button  *******
+2026-05-06 11:07:11,649 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-06 11:07:12,747 - root - INFO - *******  Verifying Request_Demo_button  *******
+2026-05-06 11:07:20,491 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-06 11:07:21,577 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-06 11:07:32,446 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-06 11:07:33,534 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-06 11:07:43,508 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-06 11:07:44,751 - root - INFO - *******  Verifying Feature Page  *******
+2026-05-06 11:07:50,984 - root - INFO - *******  Features page loaded successfully *******
+2026-05-06 11:07:52,118 - root - INFO - *******  Verifying Pricing Page  *******
+2026-05-06 11:08:04,687 - root - INFO - *******  All subscription plan details captured successfully  *******
+2026-05-06 11:08:05,792 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-06 11:08:34,069 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-06 11:08:39,667 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-06 11:08:40,741 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-06 11:09:07,350 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-06 11:09:08,415 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-06 11:09:36,812 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-06 11:09:37,902 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-06 11:10:09,906 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-06 11:10:43,624 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-06 11:10:54,764 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-06 11:11:23,576 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-06 11:11:51,940 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-06 11:12:21,204 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-06 11:12:47,486 - root - INFO - *******  Signin page loaded successfully  *******
+2026-05-06 11:12:48,591 - root - INFO - *******  Verifying Signup button redirects to Registration page *******
+2026-05-06 11:13:15,569 - root - INFO - *******  SignUp page loaded successfully  *******
+2026-05-06 11:13:16,659 - root - INFO - *******  Verifying Registration page *******
+2026-05-06 11:13:44,179 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-06 11:13:45,331 - root - INFO - *******  Verifying Registration page *******
+2026-05-06 11:14:13,828 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-06 11:14:14,897 - root - INFO - *******  Verifying Registration page *******
+2026-05-06 11:14:21,606 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-07 10:12:38,729 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-07 10:13:05,641 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-07 10:13:06,874 - root - INFO - *******  Verifying Watch Demo button  *******
+2026-05-07 10:13:11,735 - root - INFO - *******  Watch Demo button is working fine *******
+2026-05-07 10:13:12,992 - root - INFO - *******  Verifying Get_Started_button  *******
+2026-05-07 10:13:19,497 - root - INFO - *******  Get Started button is working fine *******
+2026-05-07 10:13:21,021 - root - INFO - *******  Verifying Get_Started_Now_button  *******
+2026-05-07 10:13:29,490 - root - INFO - *******  Verifying Request_Demo_button  *******
+2026-05-07 10:13:36,079 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-07 10:13:37,409 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-07 10:14:10,836 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-07 10:14:12,035 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-07 10:14:43,104 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-07 10:14:44,466 - root - INFO - *******  Verifying Feature Page  *******
+2026-05-07 10:15:12,279 - root - INFO - *******  Features page loaded successfully *******
+2026-05-07 10:15:13,668 - root - INFO - *******  Verifying Pricing Page  *******
+2026-05-07 10:15:27,237 - root - INFO - *******  All subscription plan details captured successfully  *******
+2026-05-07 10:15:28,481 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-07 10:15:57,177 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-07 10:16:06,917 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-07 10:16:08,317 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-07 10:16:14,004 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-07 10:16:15,335 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-07 10:16:45,548 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-07 10:16:47,364 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-07 10:16:59,232 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-07 10:17:00,745 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-07 10:17:31,660 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-07 10:17:32,848 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-07 10:18:07,543 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-07 10:18:09,013 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-07 10:18:19,633 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-07 10:18:21,123 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-07 10:18:54,439 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-07 10:19:04,953 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-07 10:19:06,501 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-07 10:19:16,311 - root - INFO - *******  Signin page loaded successfully  *******
+2026-05-07 10:19:17,950 - root - INFO - *******  Verifying Signup button redirects to Registration page *******
+2026-05-07 10:19:50,319 - root - INFO - *******  SignUp page loaded successfully  *******
+2026-05-07 10:19:51,923 - root - INFO - *******  Verifying Registration page *******
+2026-05-07 10:20:27,701 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-07 10:20:28,876 - root - INFO - *******  Verifying Registration page *******
+2026-05-07 10:21:04,549 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-07 10:21:05,863 - root - INFO - *******  Verifying Registration page *******
+2026-05-09 16:35:56,320 - root - INFO - *******  Verifying Home Page Title  *******
+2026-05-09 16:36:01,974 - root - INFO - *******  Home Page Title test is successful *******
+2026-05-09 16:36:03,093 - root - INFO - *******  Verifying Watch Demo button  *******
+2026-05-09 16:36:10,174 - root - INFO - *******  Watch Demo button is working fine *******
+2026-05-09 16:36:11,353 - root - INFO - *******  Verifying Get_Started_button  *******
+2026-05-09 16:36:20,902 - root - INFO - *******  Get Started button is working fine *******
+2026-05-09 16:36:21,983 - root - INFO - *******  Verifying Get_Started_Now_button  *******
+2026-05-09 16:36:30,726 - root - INFO - *******  Get Started Now button is working fine *******
+2026-05-09 16:36:31,824 - root - INFO - *******  Verifying Request_Demo_button  *******
+2026-05-09 16:36:37,139 - root - INFO - *******  Request Demo button is working fine *******
+2026-05-09 16:36:38,205 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-09 16:36:47,189 - root - INFO - *******  Valid Email verification test is successful *******
+2026-05-09 16:36:48,268 - root - INFO - *******  Verifying Email-validation  *******
+2026-05-09 16:36:57,204 - root - INFO - *******  InValid Email verification test is successful *******
+2026-05-09 16:36:58,323 - root - INFO - *******  Verifying Feature Page  *******
+2026-05-09 16:37:04,006 - root - INFO - *******  Features page loaded successfully *******
+2026-05-09 16:37:05,142 - root - INFO - *******  Verifying Pricing Page  *******
+2026-05-09 16:37:17,072 - root - INFO - *******  All subscription plan details captured successfully  *******
+2026-05-09 16:37:18,174 - root - INFO - *******  Verifying Blogs Page  *******
+2026-05-09 16:37:22,411 - root - INFO - *******  Verifying Documents Page  *******
+2026-05-09 16:37:27,188 - root - INFO - *******  Documents page loaded successfully  *******
+2026-05-09 16:37:28,273 - root - INFO - *******  Verifying FAQ Page  *******
+2026-05-09 16:37:37,923 - root - INFO - *******  FAQs page loaded successfully  *******
+2026-05-09 16:37:41,990 - root - INFO - *******  Verifying Contact Us Page  *******
+2026-05-09 16:37:50,443 - root - INFO - *******  Contact Us page loaded successfully  *******
+2026-05-09 16:37:51,572 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-09 16:37:58,662 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-09 16:37:59,757 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-09 16:38:07,917 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-09 16:38:09,068 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-09 16:38:17,083 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-09 16:38:18,162 - root - INFO - *******  Verifying Form Submission with InValid Data  *******
+2026-05-09 16:38:26,098 - root - INFO - *******  Form submission with In-Valid Data  *******
+2026-05-09 16:38:27,167 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-09 16:38:33,208 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-09 16:38:34,267 - root - INFO - *******  Verifying Form Submission with Valid Data  *******
+2026-05-09 16:38:41,759 - root - INFO - *******  Form submission with Valid Data  *******
+2026-05-09 16:38:42,856 - root - INFO - *******  Verifying Signin button redirects to Signin page *******
+2026-05-09 16:38:57,106 - root - INFO - *******  Signin page loaded successfully  *******
+2026-05-09 16:38:58,215 - root - INFO - *******  Verifying Signup button redirects to Registration page *******
+2026-05-09 16:39:03,110 - root - INFO - *******  SignUp page loaded successfully  *******
+2026-05-09 16:39:05,401 - root - INFO - *******  Verifying Registration page *******
+2026-05-09 16:39:13,619 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-09 16:39:14,978 - root - INFO - *******  Verifying Registration page *******
+2026-05-09 16:39:20,890 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-09 16:39:22,072 - root - INFO - *******  Verifying Registration page *******
+2026-05-09 16:39:30,640 - root - INFO - *******  Registration form Test completed successfully  *******
+2026-05-09 22:40:19,627 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-09 22:40:22,122 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-09 22:40:41,737 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-09 22:40:49,579 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 08:19:09,105 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 08:19:13,517 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 08:19:41,952 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 08:19:44,462 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 08:20:05,188 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 08:20:06,759 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 14:21:49,548 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 14:34:29,340 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 14:34:30,779 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 14:34:54,223 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 14:34:56,617 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 14:35:10,034 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 14:35:11,439 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 14:35:24,413 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 14:35:28,273 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 14:36:12,240 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 14:36:16,239 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 14:37:50,323 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 14:37:54,764 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 14:38:45,900 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 14:40:02,776 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 14:40:06,139 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 15:07:29,190 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:10:58,707 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:13:27,735 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:15:37,764 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:22:48,098 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:23:06,170 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:24:13,778 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:24:17,533 - root - INFO - ******* Valid Registration Successful *******
+2026-05-10 15:33:06,263 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:34:06,283 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:34:10,016 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:42:28,664 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 15:42:32,057 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 15:42:35,673 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:42:39,371 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:43:34,739 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:43:39,000 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:43:42,515 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:43:46,007 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:45:23,735 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 15:45:28,971 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 15:45:32,534 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:45:36,331 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:45:40,017 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:45:43,648 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:45:47,202 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:45:50,923 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:47:18,633 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 15:47:22,048 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 15:47:25,687 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:47:30,972 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:47:34,529 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:47:38,366 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:47:42,032 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:47:45,702 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-10 15:50:40,572 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 15:50:43,962 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-10 15:50:47,619 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:50:54,313 - root - INFO - *******  Mandatory fields verification failed with valid data *******
+2026-05-10 15:50:55,801 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:51:01,694 - root - INFO - *******  Mandatory fields verification failed with valid data *******
+2026-05-10 15:51:03,046 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-10 15:51:09,421 - root - INFO - *******  Mandatory fields verification failed with valid data *******
+2026-05-10 20:21:05,955 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:21:12,634 - root - INFO - *******  User Login successfully *******
+2026-05-10 20:22:42,271 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:27:15,845 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:29:25,674 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:29:56,581 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:30:11,808 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:30:15,417 - root - INFO - *******  User Login successfully *******
+2026-05-10 20:30:21,763 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DDB805B410>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ca4185ebd048ef5363e10c8206008abe
+2026-05-10 20:30:25,831 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DDB805BBD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ca4185ebd048ef5363e10c8206008abe
+2026-05-10 20:30:29,900 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DDB83A4390>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/ca4185ebd048ef5363e10c8206008abe
+2026-05-10 20:30:37,901 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:30:42,937 - root - INFO - *******  User Login successfully *******
+2026-05-10 20:30:49,457 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015C2913B210>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8f4d5ba351cbc00c20c3a476dc0c2df1
+2026-05-10 20:30:53,568 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015C2913BAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8f4d5ba351cbc00c20c3a476dc0c2df1
+2026-05-10 20:30:57,619 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015C29484290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8f4d5ba351cbc00c20c3a476dc0c2df1
+2026-05-10 20:32:00,858 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:32:07,604 - root - INFO - *******  User Login successfully *******
+2026-05-10 20:32:13,968 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B8D80DB450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c26cddb1f5a7829b2e9e4294f5ea7a17
+2026-05-10 20:32:18,060 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B8D80DBCD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c26cddb1f5a7829b2e9e4294f5ea7a17
+2026-05-10 20:32:22,164 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B8D8420490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c26cddb1f5a7829b2e9e4294f5ea7a17
+2026-05-10 20:48:10,068 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:48:12,363 - root - INFO - *******  User Login successfully *******
+2026-05-10 20:48:54,134 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:49:07,093 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:49:08,673 - root - INFO - *******  User Login successfully *******
+2026-05-10 20:50:29,127 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 20:50:34,272 - root - INFO - *******  User Login successfully *******
+2026-05-10 21:07:49,588 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-10 21:07:55,123 - root - INFO - *******  User Login successfully *******
+2026-05-10 21:25:39,027 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-10 21:25:44,533 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-10 21:25:48,315 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-10 21:25:52,803 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-10 21:25:56,462 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-10 21:26:01,233 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 09:24:57,250 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:25:03,234 - root - INFO - *******  User Login successfully *******
+2026-05-11 09:25:06,545 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:25:10,902 - root - INFO - *******  User Login successfully *******
+2026-05-11 09:25:14,214 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:25:18,369 - root - INFO - *******  User Login successfully *******
+2026-05-11 09:26:26,913 - root - INFO - *******  Verifying Valid User Login  *******
+2026-05-11 09:26:49,797 - root - INFO - *******  Verifying Valid User Login  *******
+2026-05-11 09:26:56,320 - root - INFO - *******  User Login successfully *******
+2026-05-11 09:27:05,736 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 09:27:11,325 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 09:27:16,383 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 09:27:21,225 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 09:28:20,817 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 09:28:27,525 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 09:28:30,862 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 09:28:37,440 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 09:28:40,794 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 09:28:47,453 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 09:29:42,869 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:29:47,263 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:29:50,538 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:29:56,330 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:29:59,840 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:30:04,419 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:30:21,067 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:30:25,443 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:30:28,749 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:30:32,930 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:30:36,298 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:30:40,437 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:32:54,532 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:32:58,979 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:33:02,711 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:33:07,237 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:33:11,832 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 09:33:16,279 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 09:42:44,228 - root - INFO - *******  Verifying Logout Functionality  *******
+2026-05-11 09:42:50,258 - root - INFO - *******  User Logged out successfully *******
+2026-05-11 09:44:01,484 - root - INFO - *******  Verifying Logout Functionality  *******
+2026-05-11 09:44:11,515 - root - INFO - *******  User Logged out successfully *******
+2026-05-11 09:44:48,458 - root - INFO - *******  Verifying Logout Functionality  *******
+2026-05-11 09:45:10,563 - root - INFO - *******  Verifying Logout Functionality  *******
+2026-05-11 09:47:10,410 - root - INFO - *******  Verifying Logout Functionality  *******
+2026-05-11 09:47:17,950 - root - INFO - *******  User Logged out successfully *******
+2026-05-11 10:01:57,270 - root - INFO - *******  Verifying Cancel Logout Functionality *******
+2026-05-11 10:02:06,991 - root - INFO - *******  User remained logged In *******
+2026-05-11 10:03:30,063 - root - INFO - *******  Verifying Valid User Login  *******
+2026-05-11 10:03:36,278 - root - INFO - *******  User Login successfully *******
+2026-05-11 10:03:39,839 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 10:03:47,529 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 10:03:51,113 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 10:03:57,722 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 10:04:01,340 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 10:04:07,924 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 10:04:12,221 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 10:04:15,824 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 10:04:20,257 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 10:04:23,813 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 10:04:30,061 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 10:04:33,669 - root - INFO - *******  Verifying Logout Functionality  *******
+2026-05-11 10:04:41,637 - root - INFO - *******  User Logged out successfully *******
+2026-05-11 10:04:45,206 - root - INFO - *******  Verifying Cancel Logout Functionality *******
+2026-05-11 10:04:52,951 - root - INFO - *******  User remained logged In *******
+2026-05-11 10:07:00,127 - root - INFO - *******  Verifying Valid User Login  *******
+2026-05-11 10:07:07,108 - root - INFO - *******  User Login successfully *******
+2026-05-11 10:07:10,739 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 10:07:17,237 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 10:07:20,760 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 10:07:27,288 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 10:07:30,857 - root - INFO - *******  Verifying InValid User Login  *******
+2026-05-11 10:07:37,636 - root - INFO - *******  Invalid User Login Failed *******
+2026-05-11 10:07:41,231 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 10:07:46,003 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 10:07:49,776 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 10:07:56,353 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 10:07:59,840 - root - INFO - *******  Verifying Forgot Password Functionality  *******
+2026-05-11 10:08:04,365 - root - INFO - *******  Forgot Password Functionality working successfully *******
+2026-05-11 10:08:07,994 - root - INFO - *******  Verifying Logout Functionality  *******
+2026-05-11 10:08:15,701 - root - INFO - *******  User Logged out successfully *******
+2026-05-11 10:08:19,172 - root - INFO - *******  Verifying Cancel Logout Functionality *******
+2026-05-11 10:08:27,064 - root - INFO - *******  User remained logged In *******
+2026-05-11 18:48:05,240 - root - INFO - *******  Verifying Shop Owner Dashboard Page  *******
+2026-05-11 18:48:09,210 - root - INFO - *******  Dashboard page launched successfully *******
+2026-05-11 18:50:32,284 - root - INFO - *******  Verifying Shop Owner Dashboard Page  *******
+2026-05-11 18:50:41,439 - root - INFO - *******  Dashboard page launched successfully *******
+2026-05-11 18:51:00,925 - root - INFO - *******  Verifying Shop Owner Dashboard Page  *******
+2026-05-11 18:51:09,436 - root - INFO - *******  Dashboard page launched successfully *******
+2026-05-11 18:53:31,745 - root - INFO - *******  Verifying Mode button  *******
+2026-05-11 18:54:34,646 - root - INFO - *******  Verifying Mode button  *******
+2026-05-11 18:54:47,529 - root - INFO - *******  Mode button working fine *******
+2026-05-11 19:01:03,437 - root - INFO - *******  Verifying How to Use guide button  *******
+2026-05-11 19:01:12,448 - root - INFO - *******  How to Use button working fine *******
+2026-05-11 19:02:09,299 - root - INFO - *******  Verifying How to Use guide button  *******
+2026-05-11 19:02:16,366 - root - INFO - *******  How to Use button working fine *******
+2026-05-11 19:05:23,549 - root - INFO - *******  Verifying Customers Dashboard Page  *******
+2026-05-11 19:05:30,818 - root - INFO - *******  Customers page launched successfully *******
+2026-05-11 19:06:28,808 - root - INFO - *******  Verifying Customers Dashboard Page  *******
+2026-05-11 19:06:37,134 - root - INFO - *******  Customers page launched successfully *******
+2026-05-11 19:07:47,950 - root - INFO - *******  Verifying Stores Dashboard Page  *******
+2026-05-11 19:07:56,388 - root - INFO - *******  Stores page launched successfully *******
+2026-05-11 20:16:38,217 - root - INFO - *******  Verifying Discounts Dashboard Page  *******
+2026-05-11 20:16:45,798 - root - INFO - *******  Discounts page launched successfully *******
+2026-05-11 20:18:12,914 - root - INFO - *******  Verifying Rewards Dashboard Page  *******
+2026-05-11 20:18:22,920 - root - INFO - *******  Rewards page launched successfully *******
+2026-05-11 20:18:41,051 - root - INFO - *******  Verifying Rewards Dashboard Page  *******
+2026-05-11 20:18:48,426 - root - INFO - *******  Rewards page launched successfully *******
+2026-05-11 20:18:57,179 - root - INFO - *******  Verifying Rewards Dashboard Page  *******
+2026-05-11 20:19:03,984 - root - INFO - *******  Rewards page launched successfully *******
+2026-05-11 20:20:13,611 - root - INFO - *******  Verifying Coupons Dashboard Page  *******
+2026-05-11 20:20:22,912 - root - INFO - *******  Coupons page launched successfully *******
+2026-05-11 20:25:51,250 - root - INFO - *******  Verifying Activity Dashboard Page  *******
+2026-05-11 20:26:01,171 - root - INFO - *******  Activity page launched successfully *******
+2026-05-11 20:26:22,057 - root - INFO - *******  Verifying Activity Dashboard Page  *******
+2026-05-11 20:26:30,608 - root - INFO - *******  Activity page launched successfully *******
+2026-05-11 20:27:18,767 - root - INFO - *******  Verifying Activity Dashboard Page  *******
+2026-05-11 20:27:27,241 - root - INFO - *******  Activity page launched successfully *******
+2026-05-11 20:28:50,984 - root - INFO - *******  Verifying Shop Owner Dashboard Page  *******
+2026-05-11 20:28:59,526 - root - INFO - *******  Dashboard page launched successfully *******
+2026-05-11 20:29:03,118 - root - INFO - *******  Verifying Customers Dashboard Page  *******
+2026-05-11 20:29:10,779 - root - INFO - *******  Customers page launched successfully *******
+2026-05-11 20:29:14,550 - root - INFO - *******  Verifying Stores Dashboard Page  *******
+2026-05-11 20:29:21,935 - root - INFO - *******  Stores page launched successfully *******
+2026-05-11 20:29:25,426 - root - INFO - *******  Verifying Discounts Dashboard Page  *******
+2026-05-11 20:29:32,396 - root - INFO - *******  Discounts page launched successfully *******
+2026-05-11 20:29:36,159 - root - INFO - *******  Verifying Rewards Dashboard Page  *******
+2026-05-11 20:29:43,232 - root - INFO - *******  Rewards page launched successfully *******
+2026-05-11 20:29:46,977 - root - INFO - *******  Verifying Coupons Dashboard Page  *******
+2026-05-11 20:29:54,671 - root - INFO - *******  Coupons page launched successfully *******
+2026-05-11 20:29:58,395 - root - INFO - *******  Verifying Activity Dashboard Page  *******
+2026-05-11 20:30:06,516 - root - INFO - *******  Activity page launched successfully *******
+2026-05-11 20:33:51,600 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-11 20:33:55,188 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-11 20:34:01,555 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015085EE61D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a5398a9eb8b536c9cd6c33efa54f5805
+2026-05-11 20:34:05,648 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015085E42D50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a5398a9eb8b536c9cd6c33efa54f5805
+2026-05-11 20:34:09,764 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015085EE73D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a5398a9eb8b536c9cd6c33efa54f5805
+2026-05-11 20:34:15,163 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-11 20:34:21,598 - root - INFO - *******  Mandatory fields verification failed with valid data *******
+2026-05-11 20:34:25,846 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015085ECC650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2c27243a87c468fdb2e24fca112bc308
+2026-05-11 20:34:29,941 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015085EE7510>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2c27243a87c468fdb2e24fca112bc308
+2026-05-11 20:34:34,030 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015085EE7990>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2c27243a87c468fdb2e24fca112bc308
+2026-05-11 20:34:39,420 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-11 20:34:45,682 - root - INFO - *******  Mandatory fields verification failed with valid data *******
+2026-05-11 20:34:49,766 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000150862A0690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/77ca84e85160a7db3ccc795915b4fb28
+2026-05-11 20:34:53,846 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000150862A21D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/77ca84e85160a7db3ccc795915b4fb28
+2026-05-11 20:34:57,909 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000150862A0BD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/77ca84e85160a7db3ccc795915b4fb28
+2026-05-11 20:35:03,286 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-11 20:35:09,381 - root - INFO - *******  Mandatory fields verification failed with valid data *******
+2026-05-11 20:35:13,482 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000150862A9E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/4ece309c39c40887fdbf313315f90cf1
+2026-05-11 20:35:17,567 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000150862A8D50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/4ece309c39c40887fdbf313315f90cf1
+2026-05-11 20:35:21,657 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015082F73590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/4ece309c39c40887fdbf313315f90cf1
+2026-05-11 20:36:18,929 - root - INFO - *******  Verifying Registration Page Title  *******
+2026-05-11 20:36:23,450 - root - INFO - *******  Register Page loaded successfully *******
+2026-05-11 20:36:29,813 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388622290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8cf5f5dd65e2283e3f6065165fca605a
+2026-05-11 20:36:33,895 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388622BD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8cf5f5dd65e2283e3f6065165fca605a
+2026-05-11 20:36:37,967 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388623490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8cf5f5dd65e2283e3f6065165fca605a
+2026-05-11 20:36:43,395 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-11 20:36:47,346 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-11 20:36:53,712 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002138862AC10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/76e065c95f0ff7a002a1437ba0dafa64
+2026-05-11 20:36:57,789 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002138862B1D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/76e065c95f0ff7a002a1437ba0dafa64
+2026-05-11 20:37:01,878 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002138862BD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/76e065c95f0ff7a002a1437ba0dafa64
+2026-05-11 20:37:07,247 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-11 20:37:11,029 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-11 20:37:17,403 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388622E50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a19b43f16a099b9ca5d9cb9561b70145
+2026-05-11 20:37:21,475 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388623790>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a19b43f16a099b9ca5d9cb9561b70145
+2026-05-11 20:37:25,596 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388622110>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a19b43f16a099b9ca5d9cb9561b70145
+2026-05-11 20:37:30,966 - root - INFO - *******  Verifying Valid Registration *******
+2026-05-11 20:37:34,835 - root - INFO - ******* Mandatory fields verification Successful with valid data *******
+2026-05-11 20:37:41,215 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388594A50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bfa145c8e6382b91271f5d8133daf52f
+2026-05-11 20:37:45,347 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388638690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bfa145c8e6382b91271f5d8133daf52f
+2026-05-11 20:37:49,438 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021388639A10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/bfa145c8e6382b91271f5d8133daf52f
+2026-05-12 15:45:49,669 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 15:45:57,202 - root - INFO - *******  Stores Page loaded successfully *******
+2026-05-12 15:46:03,548 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233B29ED090>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/38e3d46d8fcef98281778a3c617afdd2
+2026-05-12 15:46:07,607 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233B29ED890>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/38e3d46d8fcef98281778a3c617afdd2
+2026-05-12 15:46:11,696 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233B29EE190>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/38e3d46d8fcef98281778a3c617afdd2
+2026-05-12 15:46:20,586 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 15:46:29,074 - root - INFO - *******  Stores Page loaded successfully *******
+2026-05-12 15:46:35,368 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000215BC1EC310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8c61dae552a4eeed3389e47c0d18c0f0
+2026-05-12 15:46:39,465 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000215BC1ECBD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8c61dae552a4eeed3389e47c0d18c0f0
+2026-05-12 15:46:43,586 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000215BC1ED4D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/8c61dae552a4eeed3389e47c0d18c0f0
+2026-05-12 15:49:36,193 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 15:49:47,993 - root - INFO - *******  Stores Page loaded successfully *******
+2026-05-12 15:49:54,378 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002D9AC65C450>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc62703412ec9bb7b740762797bd8db8
+2026-05-12 15:49:58,475 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002D9AC65CD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc62703412ec9bb7b740762797bd8db8
+2026-05-12 15:50:02,562 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002D9AC65D610>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/fc62703412ec9bb7b740762797bd8db8
+2026-05-12 15:50:33,114 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 15:50:45,667 - root - INFO - *******  Stores Page loaded successfully *******
+2026-05-12 15:50:52,059 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E0831BC4D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/22b481c1be4f513629e85342d18215be
+2026-05-12 15:50:56,138 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E0831BCD50>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/22b481c1be4f513629e85342d18215be
+2026-05-12 15:51:00,208 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E0831BD650>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/22b481c1be4f513629e85342d18215be
+2026-05-12 15:51:22,634 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 15:51:35,222 - root - INFO - *******  Stores Page loaded successfully *******
+2026-05-12 15:51:41,617 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000190DCE6C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a38d01f93eec884c9453ffd9a5f1412e
+2026-05-12 15:51:45,684 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000190DCE6CD10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a38d01f93eec884c9453ffd9a5f1412e
+2026-05-12 15:51:49,783 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000190DCE6D550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a38d01f93eec884c9453ffd9a5f1412e
+2026-05-12 16:10:29,419 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:10:35,581 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:10:41,921 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002063607C550>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/56a4c3d6c4ccffa38abffe0099f3f320
+2026-05-12 16:10:46,010 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002063607CDD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/56a4c3d6c4ccffa38abffe0099f3f320
+2026-05-12 16:10:50,095 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002063607D6D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/56a4c3d6c4ccffa38abffe0099f3f320
+2026-05-12 16:11:06,194 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:14:30,390 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:14:33,888 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:14:40,249 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000298C92FC9D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2b42d151921751cac72a169b1d16b811
+2026-05-12 16:14:44,320 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000298C92FD290>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2b42d151921751cac72a169b1d16b811
+2026-05-12 16:14:48,392 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000298C92FDB90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2b42d151921751cac72a169b1d16b811
+2026-05-12 16:14:53,126 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:14:58,654 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:15:04,916 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FFEAA5C4D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b4350c1e1a7e937deae46750b64706b7
+2026-05-12 16:15:08,994 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FFEAA5CC90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b4350c1e1a7e937deae46750b64706b7
+2026-05-12 16:15:13,078 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FFEAA5D5D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b4350c1e1a7e937deae46750b64706b7
+2026-05-12 16:15:33,617 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:15:39,342 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:15:45,670 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028189B4C7D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2e76ddfa45dcf05639b4b49cd819c950
+2026-05-12 16:15:49,759 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028189B4D010>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2e76ddfa45dcf05639b4b49cd819c950
+2026-05-12 16:15:53,850 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000028189B4D850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/2e76ddfa45dcf05639b4b49cd819c950
+2026-05-12 16:16:26,783 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:17:54,332 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:18:00,939 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:18:07,281 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E96A73C6D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/07118a739caec343c8c9bdd1da3e6170
+2026-05-12 16:18:11,382 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E96A73CED0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/07118a739caec343c8c9bdd1da3e6170
+2026-05-12 16:18:15,493 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E96A73D7D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/07118a739caec343c8c9bdd1da3e6170
+2026-05-12 16:18:31,102 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:18:39,023 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:18:45,378 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000141C746C2D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/de2cb6cc302992839644f2075a9e628b
+2026-05-12 16:18:49,484 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000141C746CAD0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/de2cb6cc302992839644f2075a9e628b
+2026-05-12 16:18:53,541 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000141C746D310>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/de2cb6cc302992839644f2075a9e628b
+2026-05-12 16:20:07,942 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:20:17,800 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:20:25,049 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:20:31,362 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000223F200C490>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d33ffe5564d0ba9fe0c849ce91a1d72f
+2026-05-12 16:20:35,423 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000223F200CC90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d33ffe5564d0ba9fe0c849ce91a1d72f
+2026-05-12 16:20:39,534 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000223F200D4D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/d33ffe5564d0ba9fe0c849ce91a1d72f
+2026-05-12 16:22:15,089 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:22:21,661 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:22:27,962 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F9A249C850>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c15f52bd34338e0399c4076627fd2186
+2026-05-12 16:22:32,070 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F9A249D050>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c15f52bd34338e0399c4076627fd2186
+2026-05-12 16:22:36,138 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F9A249D890>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c15f52bd34338e0399c4076627fd2186
+2026-05-12 16:23:23,054 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:23:26,490 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:23:32,891 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B47379C590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a707c451a6193b3228f1b1409447fe0
+2026-05-12 16:23:36,967 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B47379CD90>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a707c451a6193b3228f1b1409447fe0
+2026-05-12 16:23:41,060 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B47379D690>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5a707c451a6193b3228f1b1409447fe0
+2026-05-12 16:43:14,968 - root - INFO - *******  Verifying Stores Page Launch  *******
+2026-05-12 16:43:19,038 - root - INFO - ******* Stores Page loaded successfully *******
+2026-05-12 16:43:25,429 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C243F10590>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/09ef912926329c42345c528568555d48
+2026-05-12 16:43:29,530 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C243F10E10>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/09ef912926329c42345c528568555d48
+2026-05-12 16:43:33,595 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C243F11710>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/09ef912926329c42345c528568555d48

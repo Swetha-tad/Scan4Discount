@@ -1,7 +1,7 @@
 import openpyxl
 
 
-def read_excel_data(file_path, sheet_name):
+def read_signup_data(file_path, sheet_name):
     workbook = openpyxl.load_workbook(file_path)
     sheet = workbook[sheet_name]
     data = []

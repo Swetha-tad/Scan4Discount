@@ -1,361 +1,235 @@
-import unittest
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from PageObjects.Dashboard import HomePage
+from PageObjects.Dashboard import DashboardPage
+from PageObjects.Login import LoginPage
 from Utilities.readProperties import ReadConfig
 from Utilities.customLogger import LogGen
 import time
-from Utilities.csv_utils import read_csv_data
-from Utilities.json_utils import read_json_data
-from Utilities.excel_utils import read_excel_data
 
 
-class Test_Website:
-    baseURL = ReadConfig.get_ApplicationURL()
-    valid_email = ReadConfig.get_valid_email()
-    Invalid_email = ReadConfig.get_Invalid_email()
-    features_url = ReadConfig.get_FeaturesURL()
-    pricing_url = ReadConfig.get_PricingURL()
-    button_pricing1 = ReadConfig.get_button_pricing1()
-    button_pricing2 = ReadConfig.get_button_pricing2()
-    blogs_url = ReadConfig.get_BlogsURL()
-    docs_url = ReadConfig.get_DocsURL()
-    faqs_url = ReadConfig.get_FAQsURL()
-    contactus_url = ReadConfig.get_ContactUs_URL()
+class TestDashboard:
+    loginURL = ReadConfig.get_loginURL()
+    # login fields
+    login_email = ReadConfig.get_login_email()
+    login_pass = ReadConfig.get_login_pass()
+    owner_id = ReadConfig.get_owner_id()
+    # dashboard fields
+    dashboard_URL = ReadConfig.get_dashboard_url()
+    mode_btn = ReadConfig.get_mode_btn()
+    guide_btn = ReadConfig.get_guide_btn()
+    overview_page = ReadConfig.get_overview_page()
+    customers_page = ReadConfig.get_customers_page()
+    stores_page = ReadConfig.get_stores_page()
+    discounts_page = ReadConfig.get_discounts_page()
+    rewards_page = ReadConfig.get_rewards_page()
+    coupons_page = ReadConfig.get_coupons_page()
+    activity_page = ReadConfig.get_activity_page()
 
     logger = LogGen.loggen()
 
-    def test_HomePageTitle(self,setup):
-        self.logger.info("*******  Verifying Home Page Title  *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
 
-        #time.sleep(2)
+    def test_Dashboard_page(self, setup):
+        self.logger.info("*******  Verifying Shop Owner Dashboard Page  *******")
+        self.driver = setup
+        self.driver.get(self.loginURL)
+        self.driver.get(self.dashboard_URL)
+        self.Login = LoginPage(self.driver)
+        self.Dashboard = DashboardPage(self.driver)
+        time.sleep(2)
+        self.Login.set_login_email(self.login_email)
+        self.Login.set_login_pass(self.login_pass)
+        self.Login.set_owner_id(self.owner_id)
+        self.Login.click_login_button()
+        time.sleep(3)
         act_title = self.driver.title
 
         if act_title == "Scan4Discount":
             assert True
+            self.logger.info("*******  Dashboard page launched successfully *******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_Dashboard_page_Pass.png")
             self.driver.close()
-            self.logger.info("*******  Home Page Title test is successful *******")
         else:
-            self.driver.save_screenshot(".\\Screenshots\\"+"test_HomePageTitle.png")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_Dashboard_page_Fail.png")
             self.driver.close()
-            self.logger.info("*******  Home Page Title test is Failed *******")
+            self.logger.info("*******  Dashboard page failed to launch *******")
             assert False
 
 
-    def test_Get_Started_button(self,setup):
-        self.logger.info("*******  Verifying Get_Started_button  *******")
+    def test_customers_page(self, setup):
+        self.logger.info("*******  Verifying Customers Dashboard Page  *******")
         self.driver = setup
-        self.driver.get(self.baseURL)
-
+        self.driver.get(self.loginURL)
+        self.driver.get(self.dashboard_URL)
+        self.Login = LoginPage(self.driver)
+        self.Dashboard = DashboardPage(self.driver)
         time.sleep(2)
-        self.Home = HomePage(self.driver)
+        self.Login.set_login_email(self.login_email)
+        self.Login.set_login_pass(self.login_pass)
+        self.Login.set_owner_id(self.owner_id)
+        self.Login.click_login_button()
+        time.sleep(3)
+        self.Dashboard.click_customers_button()
 
-        self.Home.click_get_started()
         act_title = self.driver.title
 
         if act_title == "Scan4Discount":
             assert True
+            self.logger.info("*******  Customers page launched successfully *******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_customers_page_Pass.png")
             self.driver.close()
-            self.logger.info("*******  Get Started button is working fine *******")
         else:
-            self.driver.save_screenshot(".\\Screenshots\\" + "test_Get_Started_button.png")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_customers_page_Fail.png")
             self.driver.close()
-            self.logger.info("*******  Get Started button is not working fine *******")
+            self.logger.info("*******  Customers page failed to launch *******")
             assert False
 
 
-
-    def test_Get_Started_Now_button(self,setup):
-        self.logger.info("*******  Verifying Get_Started_Now_button  *******")
+    def test_stores_page(self, setup):
+        self.logger.info("*******  Verifying Stores Dashboard Page  *******")
         self.driver = setup
-        self.driver.get(self.baseURL)
-
+        self.driver.get(self.loginURL)
+        self.driver.get(self.dashboard_URL)
+        self.Login = LoginPage(self.driver)
+        self.Dashboard = DashboardPage(self.driver)
         time.sleep(2)
-        self.Home = HomePage(self.driver)
+        self.Login.set_login_email(self.login_email)
+        self.Login.set_login_pass(self.login_pass)
+        self.Login.set_owner_id(self.owner_id)
+        self.Login.click_login_button()
+        time.sleep(3)
+        self.Dashboard.click_stores_button()
 
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(2)
-        self.Home.click_get_started_now()
         act_title = self.driver.title
 
         if act_title == "Scan4Discount":
             assert True
+            self.logger.info("*******  Stores page launched successfully *******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_stores_page_Pass.png")
             self.driver.close()
-            self.logger.info("*******  Get Started Now button is working fine *******")
         else:
-            self.driver.save_screenshot(".\\Screenshots\\" + "test_Get_Started_Now_button.png")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_stores_page_Fail.png")
             self.driver.close()
-            self.logger.info("*******  Get Started Now button is not working fine *******")
+            self.logger.info("*******  Stores page failed to launch *******")
             assert False
 
 
-
-    def test_Request_Demo_button(self,setup):
-        self.logger.info("*******  Verifying Request_Demo_button  *******")
+    def test_discounts_page(self, setup):
+        self.logger.info("*******  Verifying Discounts Dashboard Page  *******")
         self.driver = setup
-        self.driver.get(self.baseURL)
-
-        self.Home = HomePage(self.driver)
-
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        self.driver.get(self.loginURL)
+        self.driver.get(self.dashboard_URL)
+        self.Login = LoginPage(self.driver)
+        self.Dashboard = DashboardPage(self.driver)
         time.sleep(2)
-        self.Home.click_request_demo()
+        self.Login.set_login_email(self.login_email)
+        self.Login.set_login_pass(self.login_pass)
+        self.Login.set_owner_id(self.owner_id)
+        self.Login.click_login_button()
+        time.sleep(3)
+        self.Dashboard.click_discount_button()
+
         act_title = self.driver.title
 
         if act_title == "Scan4Discount":
             assert True
+            self.logger.info("*******  Discounts page launched successfully *******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_discounts_page_Pass.png")
             self.driver.close()
-            self.logger.info("*******  Request Demo button is working fine *******")
         else:
-            self.driver.save_screenshot(".\\Screenshots\\" + "test_Request_Demo_button.png")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_discounts_page_Fail.png")
             self.driver.close()
-            self.logger.info("*******  Request Demo button is not working fine *******")
+            self.logger.info("*******  Discounts page failed to launch *******")
             assert False
 
 
-    def test_validate_email(self,setup):
-        self.logger.info("*******  Verifying Email-validation  *******")
+    def test_rewards_page(self, setup):
+        self.logger.info("*******  Verifying Rewards Dashboard Page  *******")
         self.driver = setup
-        self.driver.get(self.baseURL)
-
+        self.driver.get(self.loginURL)
+        self.driver.get(self.dashboard_URL)
+        self.Login = LoginPage(self.driver)
+        self.Dashboard = DashboardPage(self.driver)
         time.sleep(2)
-        self.Home = HomePage(self.driver)
+        self.Login.set_login_email(self.login_email)
+        self.Login.set_login_pass(self.login_pass)
+        self.Login.set_owner_id(self.owner_id)
+        self.Login.click_login_button()
+        time.sleep(3)
+        self.Dashboard.click_rewards_button()
 
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(2)
-        self.Home.set_email(self.valid_email)
-        self.Home.click_subscribe()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_validate_email.png")
-        self.driver.close()
-        self.logger.info("*******  Valid Email verification test is successful *******")
+        act_title = self.driver.title
+
+        if act_title == "Scan4Discount":
+            assert True
+            self.logger.info("*******  Rewards page launched successfully *******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_rewards_page_Pass.png")
+            self.driver.close()
+        else:
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_rewards_page_Fail.png")
+            self.driver.close()
+            self.logger.info("*******  Rewards page failed to launch *******")
+            assert False
 
 
-    def test_invalid_email(self,setup):
-        self.logger.info("*******  Verifying Email-validation  *******")
+    def test_coupons_page(self, setup):
+        self.logger.info("*******  Verifying Coupons Dashboard Page  *******")
         self.driver = setup
-        self.driver.get(self.baseURL)
-
+        self.driver.get(self.loginURL)
+        self.driver.get(self.dashboard_URL)
+        self.Login = LoginPage(self.driver)
+        self.Dashboard = DashboardPage(self.driver)
         time.sleep(2)
-        self.Home = HomePage(self.driver)
+        self.Login.set_login_email(self.login_email)
+        self.Login.set_login_pass(self.login_pass)
+        self.Login.set_owner_id(self.owner_id)
+        self.Login.click_login_button()
+        time.sleep(3)
+        self.Dashboard.click_coupons_button()
 
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(2)
-        self.Home.set_email(self.Invalid_email)
-        self.Home.click_subscribe()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_invalid_email.png")
-        self.driver.close()
-        self.logger.info("*******  InValid Email verification test is successful *******")
+        act_title = self.driver.title
+
+        if act_title == "Scan4Discount":
+            assert True
+            self.logger.info("*******  Coupons page launched successfully *******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_coupons_page_Pass.png")
+            self.driver.close()
+        else:
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_coupons_page_Fail.png")
+            self.driver.close()
+            self.logger.info("*******  Coupons page failed to launch *******")
+            assert False
 
 
-    def test_features_page(self,setup):
-        self.logger.info("*******  Verifying Feature Page  *******")
+    def test_activity_page(self, setup):
+        self.logger.info("*******  Verifying Activity Dashboard Page  *******")
         self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_features()
+        self.driver.get(self.loginURL)
+        self.driver.get(self.dashboard_URL)
+        self.Login = LoginPage(self.driver)
+        self.Dashboard = DashboardPage(self.driver)
         time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_features_page.png")
-        self.driver.close()
-        self.logger.info("*******  Features page loaded successfully *******")
+        self.Login.set_login_email(self.login_email)
+        self.Login.set_login_pass(self.login_pass)
+        self.Login.set_owner_id(self.owner_id)
+        self.Login.click_login_button()
+        time.sleep(4)
+        self.Dashboard.click_activity_button()
 
-    def test_pricing_page(self,setup):
-        self.logger.info("*******  Verifying Pricing Page  *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
+        act_title = self.driver.title
 
-        self.Home.click_pricing()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_monthly_pricing.png")
-
-        self.Home.click_button_pricing1()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_quarterly_pricing.png")
-
-        self.Home.click_button_pricing2()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_yearly_pricing.png")
-        self.driver.close()
-        self.logger.info("*******  All subscription plan details captured successfully  *******")
-
-
-    def test_blogs_page(self,setup):
-        self.logger.info("*******  Verifying Blogs Page  *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_blogs()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_blogs_page.png")
-        self.driver.close()
-        self.logger.info("*******  Blogs page loaded successfully  *******")
-
-
-    def test_docs_page(self,setup):
-        self.logger.info("*******  Verifying Documents Page  *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_docs()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_docs_page.png")
-        self.driver.close()
-        self.logger.info("*******  Documents page loaded successfully  *******")
-
-
-    def test_FAQs_page(self,setup):
-        self.logger.info("*******  Verifying FAQ Page  *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_faqs()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_FAQs_page.png")
-        self.driver.close()
-        self.logger.info("*******  FAQs page loaded successfully  *******")
-
-    def test_ContactUs_page(self,setup):
-        self.logger.info("*******  Verifying Contact Us Page  *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_contact_us()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_Contact Us_page.png")
-        self.driver.close()
-        self.logger.info("*******  Contact Us page loaded successfully  *******")
-
-    # Load the data from the TestData folder
-    test_data1 = read_csv_data('TestData/invalid_data.csv')
-
-    @pytest.mark.parametrize("data", test_data1)
-    def test_form_submission_Invalid_data(self,setup, data):
-        self.logger.info("*******  Verifying Form Submission with InValid Data  *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_contact_us()
-        time.sleep(2)
-
-        self.driver.find_element(By.NAME, "name").send_keys(data['name'])
-        self.driver.find_element(By.NAME, "email").send_keys(data['email'])
-        self.driver.find_element(By.NAME, "shopName").send_keys(data['shop_name'])
-        self.driver.find_element(By.NAME, "message").send_keys(data['message'])
-
-        self.driver.find_element(By.XPATH, "(//button[normalize-space()='Send Message'])[1]").click()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_form_submission_Invalid_data.png")
-        self.driver.close()
-        self.logger.info("*******  Form submission with In-Valid Data  *******")
-
-
-
-    # Load the data from the TestData folder
-    test_data2 = read_json_data('TestData/valid_data.json')
-
-    @pytest.mark.parametrize("data", test_data2)
-    def test_form_submission_Valid_data(self, setup, data):
-        self.logger.info("*******  Verifying Form Submission with Valid Data  *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_contact_us()
-        time.sleep(2)
-
-        self.driver.find_element(By.NAME, "name").send_keys(data['name'])
-        self.driver.find_element(By.NAME, "email").send_keys(data['email'])
-        self.driver.find_element(By.NAME, "shopName").send_keys(data['shop_name'])
-        self.driver.find_element(By.NAME, "message").send_keys(data['message'])
-
-        self.driver.find_element(By.XPATH, "(//button[normalize-space()='Send Message'])[1]").click()
-        time.sleep(2)
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_form_submission_Valid_data.png")
-        self.driver.close()
-        self.logger.info("*******  Form submission with Valid Data  *******")
-
-
-    def test_signin_page(self,setup):
-        self.logger.info("*******  Verifying Signin button redirects to Signin page *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_signin()
-        time.sleep(2)
-
-        all_tabs = self.driver.window_handles
-        self.driver.switch_to.window(all_tabs[1])
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_signin_page.png")
-        self.driver.switch_to.window(all_tabs[0])
-        self.driver.close()
-        self.logger.info("*******  Signin page loaded successfully  *******")
-
-
-    def test_signup_page(self,setup):
-        self.logger.info("*******  Verifying Signup button redirects to Registration page *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_signup()
-        time.sleep(2)
-
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_signup_page.png")
-        self.driver.close()
-        self.logger.info("*******  SignUp page loaded successfully  *******")
-
-
-    excel_data = read_excel_data('TestData/Registration_data.xlsx', 'Sheet1')
-
-    @pytest.mark.parametrize("ShopName, OwnerName, EmailAddress, PhoneNumber, City, Message", excel_data)
-    def test_register_shop_form(self,setup, ShopName, OwnerName, EmailAddress, PhoneNumber, City, Message):
-        self.logger.info("*******  Verifying Registration page *******")
-        self.driver = setup
-        self.driver.get(self.baseURL)
-        self.Home = HomePage(self.driver)
-
-        self.Home.click_signup()
-        time.sleep(2)
-
-        # Fill form
-        self.driver.find_element(By.NAME, "shopName").send_keys(ShopName)
-        self.driver.find_element(By.NAME, "ownerName").send_keys(OwnerName)
-        self.driver.find_element(By.NAME, "email").send_keys(EmailAddress)
-        self.driver.find_element(By.NAME, "phone").send_keys(PhoneNumber)
-        self.driver.find_element(By.NAME, "city").send_keys(City)
-        self.driver.find_element(By.NAME, "message").send_keys(Message)
-        self.driver.find_element(By.XPATH, "(//button[normalize-space()='Submit Request'])[1]").click()
-
-        self.driver.save_screenshot(".\\Screenshots\\" + "test_register_shop_form.png")
-        self.driver.close()
-        self.logger.info("*******  Registration form Test completed successfully  *******")
-
-
-
-
-
-
-
-
-
-
-
-
+        if act_title == "Scan4Discount":
+            assert True
+            self.logger.info("*******  Activity page launched successfully *******")
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_activity_page_Pass.png")
+            self.driver.close()
+        else:
+            self.driver.save_screenshot(".\\Screenshots\\" + "test_activity_page_Fail.png")
+            self.driver.close()
+            self.logger.info("*******  Activity page failed to launch *******")
+            assert False
 
 
 

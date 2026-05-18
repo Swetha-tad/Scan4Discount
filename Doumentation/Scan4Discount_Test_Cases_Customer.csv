@@ -1,0 +1,1947 @@
+Project Name,Scan4Discount,,,,,,,,,,,,,
+Version,1.3.1,,,,,,,,,,,,,
+Document,TestCases Doc,,,,,,,,,,,,,
+Module Name,Customer Portal,,,,,,,,,,,,,
+Browsers Used,Chrome/Firefox/Edge,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+TC_ID,Module/ Sub module,TS_ID,Test Scenario,Test Case Title,Pre-Condition,Test Steps,Test data,Automate,TestCase type,Expected Result,Actual Result,Status,Bug_ID,Bug_Description
+TC_001,Browser Launch,TS_001,Verify that the application URL loads successfully in the browser,URL Launch,"1. Browser is installed (Chrome/Firefox/Edge)
+","1) Open browser
+2) Enter application URL
+3) Press Enter
+",URL: https://test-login.scan4discount.com/in/login,Yes,Positive,"Login page loads successfully
+",Page title and logo are visible,Pass,-,-
+TC_002,Registration,TS_002,Validate the user/shop owner registration functionality,Registration with Valid Data,1.User is on login page,"1) Click on “Create Account”
+2) Enter valid mobile number
+3) Click Next
+4) Select subscription plan
+5) Complete payment
+6) Submit registration
+","Mobile Number: 7036195435
+Subscription plan: Basic plan
+",Partially Yes,Positive,"Registration is successful
+
+Success message displayed
+",User is redirected to dashboard,Pass,-,-
+TC_003,,TS_002,,Registration with Invalid Mobile Number,1.User is on login page,"1) Click on “Create Account”
+2) Enter invalid mobile number
+3) Click Next
+","Mobile Number: 1545437120
+
+",Partially Yes,Negative,User is not allowed to proceed,Validation error message displayed,Pass,-,-
+TC_004,,TS_002,,Registration with Empty Field,1.User is on login page,"1) Click on “Create Account”
+2) Leave mobile number empty
+3) Click Next
+",N/A,Partially Yes,Negative,"Field is highlighted
+
+User cannot proceed",Mandatory field error displayed,Pass,-,-
+TC_005,,TS_002,,Registration with Already Registered Mobile Number,"1. User is on login page
+2. Mobile number already exists in system
+","1) Click on “Create Account”
+2) Enter already registered mobile number
+3) Click Next
+","Mobile Number: 7036195435
+
+",Partially Yes,Negative,"
+User is not allowed to proceed
+",Error message displayed: “Mobile number already registered”,Pass,-,-
+TC_006,,TS_002,,Registration with Special Characters in Mobile Number,"1. User is on login page
+
+","1) Click on “Create Account”
+2) Enter mobile number with special characters
+3) Click Next
+","Mobile Number: 98@76#54!21
+
+",Partially Yes,Negative,"Only numeric input is accepted
+
+User cannot proceed",Validation error message displayed,Pass,-,-
+TC_007,,TS_002,,Registration with Less Than Required Digits,"1. User is on login page
+
+","1) Click on “Create Account”
+2) Enter mobile number with less than required digits
+3) Click Next
+","Mobile Number: 98754
+
+",Partially Yes,Negative,Minimum digit requirement enforced,Validation error message displayed,Pass,-,-
+TC_008,,TS_002,,Network Failure During Registration,"1. User is on login page
+
+","1) Click on “Create Account”
+2) Enter valid mobile number
+3) Turn off internet connection
+4) Click Next
+","Mobile Number: 9875422312
+
+",No,Edge,"Proper error message displayed (network error)
+Registration is not completed
+",User remains on the same page as it displays network error,Pass,-,-
+TC_009,,TS_002,,Page Refresh During Registration,"1. User has entered mobile number
+
+","1) Click on “Create Account”
+2) Enter valid mobile number
+3) Refresh the page
+","Mobile Number: 9875422312
+
+",No,Edge,"Entered data is cleared or handled properly
+No partial registration is saved
+",User is redirected to initial state,Pass,-,-
+TC_010,Login,TS_003,Verify user/shop owner login functionality,Login with Valid Credentials,"1. User is registered
+2. User is on login page","1) Enter valid email
+2) Enter valid password
+3) Enter valid shop owner ID
+4) Click on Login","Email: bhargavi.k.visys@gmail.com
+Password: Owner@123
+Shop owner ID: owner_1196",Yes,Positive,"User is logged in successfully
+
+No error message displayed",User is redirected to dashboard,Pass,-,-
+TC_011,,TS_003,,Login with Invalid Email,"1. User is registered
+2. User is on login page","1) Enter Invalid email
+2) Enter valid password
+3) Enter valid shop owner ID
+4) Click on Login","Email: bhargavi.k.visys@gmail
+Password: Owner@123
+Shop owner ID: owner_1197",Yes,Negative,"Error message displayed for invalid email
+User is not logged in",User unable to login,Pass,-,-
+TC_012,,TS_003,,Login with Incorrect Password,"1. User is registered
+2. User is on login page","1) Enter valid email
+2) Enter Incorrect password
+3) Enter valid shop owner ID
+4) Click on Login","Email: bhargavi.k.visys@gmail.com
+Password: Owner@
+Shop owner ID: owner_1196",Yes,Negative,"Error message displayed: invalid credentials
+",User is not logged in,Pass,-,-
+TC_013,,TS_003,,Login with Empty Fields,"1. User is registered
+2. User is on login page","1) Leave email, password, and shop owner ID empty
+2) Click on Login",N/A,Yes,Negative,"Required field validation messages displayed
+Fields are highlighted
+",User cannot proceed,Pass,-,-
+TC_014,,TS_003,,Forgot Password with OTP ,"1. User is registered
+2. User is on login page","1) Click on “Forgot Password”
+2) Enter registered email or mobile number
+3) Click on Send OTP
+4) Enter valid OTP
+5) Set new password
+6) Submit
+",N/A,Yes,Positive,"OTP is sent successfully
+Password is reset successfully
+User can login with new password",Forgot password link is not visible,Fail,BUG_012,Login page does not provide Forgot Password option for password recovery
+TC_015,,TS_003,,Multiple Failed Login Attempts,"1. User is registered
+2. User is on login page","1) Enter valid email
+2) Enter incorrect password
+3) Enter valid shop owner ID
+4) Click on Login
+5) Repeat steps 1–4 for 3 to 5 consecutive attempts
+","Email: bhargavi.k.visys@gmail.com
+Password: Wrong@123
+Shop Owner ID: owner_1196",No,Negative,System displays error message for invalid credentials on each attempt,Everytime system displays the validation error message,Pass,-,-
+TC_016,,TS_003,,Login After Account Lock,"1. User is registered
+2. User is on login page","1) Perform multiple failed login attempts until account is locked
+2) Wait for lock duration 
+3) Enter valid credentials
+4) Click on Login
+","Email: bhargavi.k.visys@gmail.com
+Password: Owner@123
+Shop owner ID: owner_1196",No,Edge,"User is able to login successfully after lock is removed
+",Account functions normally without any lock,Fail,BUG_051,System should lock or restrict the user for sometime after multiple failed attempts
+TC_017,Logout,TS_004,Verify that the user/shop owner logout functionality,Logout functionality,"1. User is logged in
+","1) Click on Logout option
+",N/A,Yes,Positive,User redirects to login page,User redirects to dashboard,Pass,-,-
+TC_018,,TS_004,,Access After Logout,"1. User has logged out
+","1) Click browser Back button
+2) Try to access any protected page URL directly
+",N/A,Yes,Negative,Access is denied without login,User stays on login page,Pass,-,-
+TC_019,Dashboard / Overview,TS_005,"Verify that the dashboard displays business metrics such as revenue, customers, and activity",Dashboard Overview Load,"1. User is logged in as Shop Owner
+
+","1) Navigate to Dashboard
+2) Open Overview tab",N/A,Yes,Positive,"Overview widgets, tabs, and charts are displayed without UI break",System displays business metrics accurately,Fail,"BUG_016, 017",This Month Revenue and All Time Revenue display the same value on the Shop Owner Dashboard.
+TC_020,Dashboard / Overview,TS_005,, Dashboard Guide Not Loading,"1. Dashboard has ""How to Use"" Guide button","1) Open Overview tab
+2) Locate “How to Use” button",N/A,No,Positive,"Button navigates to user manual document
+",Values are not properly formatted,Fail,BUG_001,"Users are unable to access the dashboard guide after clicking the ""How to Use"" button. ."
+TC_021,Dashboard / Overview,TS_005,,User friendly button,1. Dashboard has a night mode button,"1) Open Overview tab
+2) Locate “Night mode” button",N/A,No,Positive,"Button switches to night mode
+",Clicking on button switches back to light mode,Pass,-,-
+TC_022,Dashboard / Overview,TS_005,,Stores Summary Validation,1. Stores data exists in the system,"1) Open Overview tab
+2) Check Stores summary section",N/A,No,Positive,Store totals and QR code count are displayed correctly,Store count doesn’t match to QR code active ,Fail,BUG_018, QR code active count is inconsistent across dashboard metrics.
+TC_023,Dashboard / Customers,TS_005,,Customer Tab Validation,1. Customer data exists,"1) Navigate to Dashboard
+2) Open Customers tab",N/A,No,Positive,Customer list is sorted and all required columns are shown,Customer info display not matching with the metrics,Fail,BUG_019,Customers tab shows identical values for New This Month and Total Customers.
+TC_024,Dashboard / Stores,TS_005,,Store Performance Table,1. Store Data exists,"1) Navigate to Dashboard
+2) Open Stores tab",N/A,No,Positive,Table columns and records are displayed correctly,Store performance review chart displays correct metrics,Pass,-,-
+TC_025,Dashboard / Discounts,TS_005,,Discount Summary,1. Discount Rule exists,"1) Navigate to Dashboard
+2) Open Discounts tab
+
+
+",N/A,No,Positive,All summary cards appear with correct labels,The Discounts page in the Shop Owner Dashboard does not reflect the correct counts for Inactive and Expired rules. ,Fail,BUG_020,Discounts page does not update inactive and expired rule counts correctly.
+TC_026,Dashboard / Rewards,TS_005,,Rewards Summary,1. Reward data exists,"1) Navigate to Dashboard
+2) Open Rewards tab",N/A,No,Positive,All metrics and customer ranking are displayed,Reward metric displays as expected,Pass,-,-
+TC_027,Dashboard / Coupons,TS_005,,Coupons Data Validation,1. Coupon data exists,"1) Navigate to Dashboard
+2) Open Coupons tab",N/A,No,Positive,"Coupons data, expiry, and discount information are visible",Coupon data macthes with discount rules,Fail,BUG_021,Dashboard coupon counts do not match Future Discount Rules data.
+TC_028,Dashboard / Activity,TS_005,,Recent Activity Validation,1. Transaction data exists,"1) Navigate to Dashboard
+2) Open Activity tab",N/A,No,Positive,"Latest transactions appear in descending time order with bill, discount, and savings info",Recent transactions appeared in the display,Pass,-,-
+TC_029,Dashboard ,TS_005,,Dashboard Data Refresh After New Transaction,"1. User is logged in
+2. At least one store exists","1) Navigate to Dashboard
+2) Note current values (Revenue, Transactions)
+3) Perform a new transaction (e.g., coupon redemption or purchase)
+4) Return to Dashboard or refresh the page
+",N/A,No,Edge,Dashboard updates with latest data,Revenue reflects new transaction amount,Pass,-,-
+TC_030,Stores / My Stores,TS_006,Verify that the “My Stores” page displays all created stores with details,My Stores Page Load,"1. User is logged in as Shop Owner
+
+",1) Navigate to My Stores page,N/A,Yes,Positive,"Top metrics, search, filters, and Add Store button are visible","The ""limit reached"" message is shown even though only 20 stores exist.",Fail,BUG_014,Store Limit reached is shown early
+TC_031,,TS_007,Verify that the search functionality works with applied filters,Search with Valid Data,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Enter valid keyword in search","Search keyword:
+Malabar Golds & Diamonds",Yes,Positive,Results displayed correspond to the keyword,"Matching store(s) are displayed
+",Pass,-,-
+TC_032,,TS_007,,Search with Invalid Data,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Enter Invalid keyword in search","Search keyword:
+9r3nfjw",Yes,Negative,"No results found message is shown
+",The system incorrectly shows “Create First Store” when the search returns no results,Fail,BUG_030,Invalid search shows “Create First Store” instead of “Back to Stores”
+TC_033,,TS_007,,Filter Active Stores,"1. Active stores exist
+
+","1) Navigate to My Stores
+2) Apply Active  filter",N/A,No,Positive,Count matches active store metrics,Only active stores are displayed,Pass,-,-
+TC_034,,TS_007,,Filter Inactive Stores,"1. Inactive stores exist
+
+","1) Navigate to My Stores
+2) Apply Inactive  filter",N/A,No,Positive,Only inactive stores are displayed,All inactive stores are displayed in result,Pass,-,-
+TC_035,,TS_008,Verify that the user/shop owner can view and manage store details,View Store Details,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Click View on any store",N/A,No,Positive,Store details modal/page opens,All fields are visible and readable,Pass,-,-
+TC_036,,TS_008,,Edit Store with Valid Data,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Click Edit on a store
+3) Update valid data
+4) Click Update",Phone number: 9340098912,Yes,Positive,Store details are updated successfully,Updated data is reflected in list and details view,Pass,-,-
+TC_037,,TS_008,,Edit Store with Invalid Data,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Click Edit
+3) Enter invalid pincode
+4) Click Update",Pincode: jdfeaj542,Yes,Negative,Validation error is shown,Store accepts invalid data,Pass,-,-
+TC_038,,TS_008,,Edit with Empty Mandatory Fields,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Click Edit
+3) Clear mandatory fields
+4) Click Update",N/A,Yes,Negative,Required field validations are displayed,Incorrect validation message shown while creating a new store,Fail,BUG_023,Incorrect validation message shown while creating a new store
+TC_039,,TS_008,,Deactivate Store,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Click Deactivate on a store
+",N/A,No,Positive,Store status changes to Inactive,Store appears under Inactive filter,Pass,-,-
+TC_040,,TS_008,,Reactivate Store,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Select an inactive store
+3) Click Activate
+",N/A,No,Positive,Store status changes to Active,Store appears under Active filter,Pass,-,-
+TC_041,,TS_008,,Delete Store,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Click Delete on a store
+3) Confirm deletion
+",N/A,Yes,Positive,"Store is removed from list
+Deleted store is not accessible",The system allows the deletion of stores with active rules or active data. The delete action is not restricted.,Fail,BUG_031,Store with active rules can't be deleted
+TC_042,,TS_008,,Delete Store,"1. User is logged in as Shop Owner
+2. Store data exists in the record
+
+","1) Navigate to My Stores
+2) Click Delete on a store
+3) Confirm deletion
+",N/A,Yes,Positive,"The system should display a success confirmation message after a store is deleted successfully. For example, it should say “Store deleted successfully”.","After deleting a store, the system shows a wrong validation message instead of the expected success message.",Fail,BUG_032,Wrong validation message displayed on store deletion
+TC_043,Stores / Add Store,TS_009,Verify that the user/shop owner can add a new store,Create Store with Valid Data,"1) User has permission to add store
+
+
+","1) Navigate to Stores
+2) Click Add Store
+3) Enter valid details
+4) Click Create","Store Name: 
+Dryfruit store
+Addres: 
+ABC colony, balanagar
+City: 
+Hyderabad
+Phone Number: 9212311210
+",Yes,Positive,Store is created successfully,Store appears in list,Pass,-,-
+TC_044,,TS_009,,Cancel Store Creation,"1) User has permission to add store
+
+
+","1) Open Add Store
+2) Enter details
+3) Click Cancel/Back","Store Name: 
+Dryfruit store
+Addres: 
+ABC colony, balanagar
+City: 
+Hyderabad
+Phone Number: 9212311210
+Pincode: 500032
+",Yes,Positive,"Store is not created
+User returns to My Stores page",Store creation is cancelled,Pass,-,-
+TC_045,,TS_009,,Create Store with Invalid Data,"1) Owner has access to add store
+
+
+","1) Open Add Store
+2) Enter invalid data
+3) Click Create","Store Name: 
+5213214348njfefkmkef
+Addres: 
+jgt4
+City: 
+Hyd
+Phone Number: 92322
+Pincode: 1234
+",Yes,Negative,"Validation errors are displayed for each field
+Store is not created",Store accepts invalid data,Fail,BUG_002, No Character Limit on Store Fields
+TC_046,,TS_009,,Create Store with Empty Fields,"1) Owner has access to add store
+
+
+","1) Open Add Store
+2) Leave mandatory fields empty
+3) Click Create",N/A,Yes,Negative,Required field messages are shown,"
+Store creation is blocked",Pass,-,-
+TC_047,,TS_009,,Duplicate Store Creation,1) A store already exists with same name and phone number,"1) Navigate to Add Store
+2) Enter store details with existing name and phone number
+3) Click Create
+","Store Name: Dryfruit Store
+Phone: 9212311210",Yes,Edge,System displays error message,Store duplication is allowed,Fail,BUG_052,Duplication of stores creates confusion among the users to read and analyse the store metrics
+TC_048,,TS_009,,Verify store limit,"1) Store limit reaches
+
+
+","1) Navigate to Add Store
+2) Enter valid data
+3) Click Create","Store Name: 
+Dryfruit store
+Addres: 
+ABC colony, balanagar
+City: 
+Hyderabad
+Phone Number: 9212311210
+",No,Positive,System shouldnot allow to create store exceeds the limit,Shop owner creates store succesfully,Fail,BUG_004,Makes the UI looks messy and hard to read the data
+TC_049,,TS_010,Validate the generated QR code,QR Code Generation,"1.Store data exists in the record
+
+","1) Navigate to My Stores
+2) Click View/Download QR",N/A,No,Positive,"QR modal opens
+QR image is visible
+Store details are displayed
+Download option is available","The downloaded QR code is distorted, displaying blurry text with repeats.",Fail,BUG_011,Downloaded QR Code Looks Distorted
+TC_050,,TS_010,,QR Code Scannability,1. QR code is generated,"Scan QR code using a scanner/device
+",N/A,No,Positive,"
+Store details or landing page loads successfully
+",QR redirects to correct store/flow ,Pass,-,-
+TC_051,"Rules /
+Create Discount Rule",TS_011,Verify if the Discount rule page loads and shows all the metrics accurately,Discount Rule Page Load,"1) User is logged in
+2) Store data exists in the record
+
+",1) Navigate to Rules ? Create Discount Rule,N/A,Yes,Positive,"Page loads successfully
+
+No UI issues or errors",Discount metrics are visible,Pass,-,-
+TC_052,,TS_012,Verify that the user/shop owner can create a discount rule,Create Discount Rule with Valid Data,"1) Store is in Active status
+
+","1) Navigate to Create Discount Rule
+2) Click Create
+3) Select store
+4) Select template
+5) Enter valid data
+6) Click Create
+","Discount Rule Name: 
+24 HOURS DEAL
+Min Amount: 799
+Max Amount: 5999
+Customer Limit: 25
+Discount options: 5, 10, 15
+Start Date & Time:    20-04-2026 11:00 AM
+End Date & Time:      20-04-2026 12:00 PM
+",Yes,Positive,"Rule is created successfully
+Rule appears in list
+Data is saved correctly",System unable to create the discount rule,Fail,BUG_003,Discount Rule Not Creating
+TC_053,,TS_012,,Create Rule with Invalid Data,"1) Store is in Active status
+
+","1) Open Create Rule
+2) Enter:
+    Min > Max
+    Customer limit = 0
+    Invalid date range
+3) Click Create","Discount Rule Name: 
+gn87fehnjkaeu83fe3526  3r43'3'23213874343899e8439 fjt854wsdfbrtb6d58f4e65sfew30394rmvkgf5bvre387gf4gv5r3f4we8f4we653c21es9f-765gfv
+Min Amount: 500
+Max Amount: 200
+Customer Limit: 0
+Discount options: 0 
+Start Date & Time:    20-04-2026 12:00 PM
+End Date & Time:      20-04-2026 11:00 AM
+",Yes,Negative,"Validation errors are displayed
+Rule is not created",System blocks the user,Pass,-,-
+TC_054,,TS_012,,Create Rule with Empty Fields,"1) Store is in Active status
+
+","1) Open Create Rule
+2) Leave mandatory fields empty
+3) Click Create
+",N/A,Yes,Negative,Required field validation messages appear,Rule creation is blocked,Pass,-,-
+TC_055,,TS_012,,Duplicate Discount Rule Creation,"1) User is logged in
+2) A discount rule already exists for the same store with same name","1) Navigate to Rules ? Create Discount Rule
+2) Click on Create
+3) Enter rule details with existing rule name and same store
+4) Click on Create","Store name: Lifestyle
+Discount Rule Name: 
+24 HOURS DEAL
+Min Amount: 599
+Max Amount: 3999
+Customer Limit: 10
+Discount options: 8
+Start Date & Time:    21-04-2026 11:00 AM
+End Date & Time:      21-04-2026 12:00 PM
+",Yes,Negative,"System displays error message
+Duplicate rule is not created
+User remains on creation page","User uanble to duplicate the discount rule as it displays ""Rule is already existed""",Pass,-,-
+TC_056,,TS_012,,Overlapping Time Rule Validation,"1) User is logged in
+2) Store is active","1) Navigate to Rules ? Create Discount Rule
+2) Create rule A (10 AM – 12 PM)
+3) Create rule B (11 AM – 1 PM) for same store
+4) Submit Rule B
+","Rule A: 10 AM – 12 PM
+Rule B: 11 AM – 1 PM",No,Edge,"
+System allows but applies defined conflict logic",System prevents overlapping rule creation,Pass,-,-
+TC_057,,TS_012,,Discount Rule Data Persistence,"1) User is logged in
+2) Store is active","1) Create a new discount rule
+2) Logout from application
+3) Login again
+4) Navigate to Discount Rules page
+",Rule Name: Test Rule Persistence,No,Edge,Created rule is present in list,Rule data remains unchanged,Pass,-,-
+TC_058,,TS_012,,Rule Name Special Character Validation,"1) User is logged in
+","1) Navigate to Create Discount Rule
+2) Enter rule name with special characters/script
+3) Click on Create",Rule Name: <script>alert(1)</script>,Yes,Negative,"Input is rejected or sanitized
+
+No UI break or script execution",Validation message displayed,Pass,-,-
+TC_059,,TS_012,,Discount Rule Page Performance with Large Data,1. Multiple rules exist (50–100),"1) Navigate to Discount Rules page
+2) Apply filters/search (optional)",N/A,No,Edge,"Page loads within acceptable time
+No UI lag or crash
+",Data loads correctly,Pass,-,-
+TC_060,,TS_013,Verify the Discount rule functionality and validate the QR code,Discount Application via QR,"1) Discount rule is Active
+
+","1) Scan store QR
+2) Enter customer details
+3) Enter purchase amount within range
+","Store Name: Lifestyle
+
+Customer details
+Full Name: Kalyani
+Phone Number: 95502633312
+Purchase Amount: 1000
+",No,Positive,"Discount is applied
+Final amount is calculated correctly
+Discount details are visible",Customer sees no discount available even with valid data,Fail,BUG_054,Discount rule not applying 
+TC_061,,TS_013,,Customer Limit Exceeded,"1) Discount rule is Active
+
+","1) Scan store QR 
+2) Enter customer details
+3) Enter purchase amount within range
+","Store Name: Lifestyle
+
+Customer details
+Full Name: Sundar
+Phone Number: 9622057782
+Purchase Amount: 1200
+",No,Negative,"Customer receives a message no discount applied ""Better luck next time"" as the customer limit exceeds",Customer received discount successfully,Fail,BUG_055,Sometimes customer gets discount than the exceeding customer limit
+TC_062,,TS_013,,Discount within Purchase Amount,"1) Discount rule is Active
+
+","1) Scan store QR 
+2) Enter customer details
+3) Enter purchase amount within range
+","Store Name: Lifestyle
+
+Customer details
+Full Name: Sundar
+Phone Number: 9622057782
+Purchase Amount: 799, 800 and 5998, 5999
+",No,Boundary,Discount applied within valid range,Customer receives discount with the range,Pass,-,-
+TC_063,,TS_013,,Discount beyond Purchase Amount,"1) Discount rule is Active
+
+","1) Scan store QR 
+2) Enter customer details
+3) Enter purchase amount less and beyond the range
+","Store Name: Lifestyle
+
+Customer details
+Full Name: Sundar
+Phone Number: 9622057782
+Purchase Amount: 798 and 6000
+",No,Boundary,No discount outside range,Customer didn’t receive the discount,Pass,-,-
+TC_064,,TS_013,,Time Window Validation,"1) Discount rule is Active
+
+","1) Scan store QR 
+2) Enter customer details
+3) Enter purchase amount ","Store Name: Lifestyle
+
+Customer details
+Full Name: Hari
+Phone Number: 9622057782
+Purchase Amount: 1300
+",No,Boundary,"
+Discount should be applied.","	Discount applies within time",Pass,-,-
+TC_065,,TS_013,,Time Window Validation,"1) Discount rule is Inactive
+
+
+","1) Scan store QR 
+2) Enter customer details
+3) Enter purchase amount 
+","Store Name: Lifestyle
+
+Customer details
+Full Name: Hari
+Phone Number: 9622057782
+Purchase Amount: 650
+",No,Boundary,"	
+Discount shall not apply.",No discount outside time,Pass,-,-
+TC_066,,TS_013,,Multiple Discount Rule Conflict Handling,"1) Two active rules exist for same store
+2) Both rules satisfy purchase conditions
+","1) Scan store QR code
+2) Enter purchase details meeting both rule conditions
+3) Submit","RULE 1:
+Store Name: Lifestyle
+
+Customer details
+Full Name: Ganapathi
+Phone Number: 7880332189
+Purchase Amount: 500
+
+RULE B:
+Store Name: Lifestyle
+
+Customer details
+Full Name: Srinivas
+Phone Number: 7036619549
+Purchase Amount: 1300",No,Positive,"
+
+Correct rule selection logic is followed
+
+Final discount calculation is accurate",Only one discount rule is applied ,Pass,-,-
+TC_067,,TS_014,Verify that the search functionality works for discount rules,Search Discount Rule,"1) Owner user is logged in
+2) Store data exists in the record
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Enter valid keyword search
+",check,Yes,Positive,"Matching rules are displayed
+Data is accurate",Keyword search displays the correct rule,Pass,-,-
+TC_068,,TS_014,,Filter Active rules,"1) Discount rule is Active
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Apply Active filter
+",N/A,No,Positive,Only active discount rules with store data is shown,All active discount rules were shown,Pass,-,-
+TC_069,,TS_014,,Filter Inctive rules,"1) Discount rule is Inactive
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Apply Inactive filter
+","Store Name: 
+Manyavar",No,Negative,Only Inactive rules should be displayed if exists in the data,No records were shown,Pass,-,-
+TC_070,,TS_015,Verify that the user/shop owner can manage discount rules,View Rule,"1) Discount rule exists
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Click on View
+",N/A,No,Positive,"Rule details modal opens
+All fields visible",Discount rule details are visible,Pass,-,-
+TC_071,,TS_015,,Edit Rule (Valid),"1) Discount rule exists
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Click on Edit
+3) Enter valid details 
+","Discount Rule Name:   24-7  DEALS
+Customer limit: 8
+Start Date & Time:      20-04-2026 02:00 PM
+End Date & Time:        20-04-2026 04:00 PM
+ ",Yes,Positive,Discount rule accepts valid data,Rule updated successfully,Pass,-,-
+TC_072,,TS_015,,Edit Rule (In-Valid),"1) Discount rule exists
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Click on Edit
+3) Enter Invalid details 
+","Discount Rule Name: 24/7  DEALS
+Customer limit: 0
+Start Date & Time:    20-04-2026 02:00 PM
+End Date & Time:      19-04-2026 04:00 PM
+ ",Yes,Negative,Discount rule should not  accepts In-valid data,"Validation errors shown
+Update blocked",Pass,-,-
+TC_073,,TS_015,,Deactivate Rule,"1) Discount rule exists
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Select the active rule
+3) Click on Deactivate
+",N/A,No,Positive,Rule status changes to inactive,Rule deactivates successfully and appears in the Inactive filter,Pass,-,-
+TC_074,,TS_015,,Activate Rule,"1) Discount rule exists
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Select the active rule
+3) Click on Activate
+",N/A,No,Positive,Rule becomes active,Rule activates succesfully,Pass,-,-
+TC_075,,TS_015,,Delete Rule,"1) Discount rule exists
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Select the rule
+3) Click on Delete
+",N/A,Yes,Positive,"Rule removed from list
+Cannot be accessed",Rule deleted successfully,Pass,-,-
+TC_076,,TS_015,,Deactivate All Rule,"1) Discount rule exists
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Click on Deactivate All
+",N/A,No,Positive,All Rules status changes to inactive,All rules were deactivated at once,Pass,-,-
+TC_077,,TS_015,,Activate Rule,"1) Discount rule exists
+
+
+
+","1) Navigate to Rules ? Create Discount Rule
+2) Click on Deactivate All
+",N/A,No,Positive,All Rules becomes active,Rules activated successfully,Pass,-,-
+TC_078,"Rules /
+Create Gift Rule",TS_016,Verify if the Gift rule page opens and shows all the metrics accurately,Verify Gift Rule page loads with metrics,"1) Owner is logged in 
+2) Store data exists
+
+
+
+",1. Navigate to Rules > Gift Rules. 2. Observe dashboard metrics.,N/A,Yes,Positive,"Page loads successfully
+
+Values match backend data",Gift rule description is missing at the top,Fail,BUG_035,Gift Rule page is missing rule title and description header-
+TC_079,,TS_017,Verify that the user/shop owner can create a gift rule,Create Gift Rule with valid inputs,"1) User is logged in
+2) Store is active","1. Navigate to Rules ? Create Gift Rule
+2. Click on Create
+3. Enter all required fields
+4. Click on Create Gift Rule","Gift Rule Name: 
+T-shirt Campaign
+Gift Name: 
+T-shirt
+Customer Limit: 10
+Start:
+20-04-2026 16:00 
+End:
+20-04-2026 18:00 
+",Yes,Positive,"Gift rule is created
+Rule appears in list",Gift rule created successfully,Pass,-,-
+TC_080,,TS_017,,Create Gift Rule with invalid inputs,"1) User is logged in
+2) Store is active","1. Navigate to Create Gift Rule
+2. Enable Minimum Purchase
+3. Enter invalid values
+4. Click Create","Gift Name: 
+6523_384u38ur
+Min Amount:200
+Max Amount: 150
+Customer Limit: 10
+Start Date & Time:
+20-04-2026 16:00 
+End Date & Time:
+20-04-2026 18:00 
+",Yes,Negative,"Validation errors displayed
+Rule is not created",Gift rule accepts invalid data and no character llimitation,Fail,BUG_008,Gift rule name has no character limit
+TC_081,,TS_017,,Create Gift Rule with empty mandatory fields,"1) User is logged in
+2) Store is active","1.Open Create Gift Rule
+2.Leave required fields empty
+3.Click Create
+",N/A,Yes,Negative,Required field validation shown,Rule is not created,Pass,-,-
+TC_082,,TS_017,,Create Gift Rule for inactive store,"1) User is logged in
+2) Store is inactive","1. Navigate to Create Gift Rule
+2. Open store dropdown
+",N/A,No,Edge,Inactive store is not visible,User remains on the same page ,Pass,-,-
+TC_083,,TS_017,,Verify minimum purchase toggle behavior,"1) User is logged in
+","1. Open Create Gift Rule
+2. Enable “Require Minimum Purchase”
+3. Observe fields
+4. Disable toggle
+",N/A,No,Edge,"Min/Max fields appear when enabled
+Fields hide or disable when unchecked",Toggles are functioning properly,Pass,-,-
+TC_084,,TS_017,,Validate gift image upload,1) User is on Create Gift Rule page,"1. Upload valid image
+2. Upload invalid format
+3. Upload file > 20MB
+",N/A,No,"Positive, Negative ","Valid file uploads
+Invalid formats rejected
+Size limit enforced",File uploaded successfully,Pass,-,-
+TC_085,,TS_017,,Validate special characters in gift fields,1) User is on Create Gift Rule page,"1. Navigate to Rules ? Create Gift Rule
+2. Click on Create
+3. Enter script or special characters
+4. Click on Create Gift Rule","Gift Rule Name: 
+<script>alert(1)</script>
+ 
+",No,Negative,Input is sanitized or rejected,Gift rule is not accpeting the invalid data,Pass,-,-
+TC_086,,TS_018,Verify the Gift rule functionality by validating the QR code,Gift Without Purchase,"1) Rule created without minimum purchase
+","1. Scan QR code
+2. Enter customer details
+3. Submit","Customer details
+Full Name: Hussain shaik
+Phone Number: 7880332189
+Purchase Amount: 0",No,Positive,Gift is applied without entering minimum purchase amount,Customer receives gift without minimum purchase,Pass,-,-
+TC_087,,TS_018,,Verify customer limit enforcement,1. Gift rule with limit = 2,"1. Redeem gift for 2 users
+2. Try redeem for 3rd user","Gift Rule Name: 
+T-shirt Campaign
+Gift Name: 
+T-shirt
+Customer Limit: 2
+Start:
+20-04-2026 16:00 
+End:
+20-04-2026 18:00 
+",No,Negative,"Customer doesn’t get the gift as the page displays ""better luck next time""",Customer doesn’t receive any discont,Pass,-,-
+TC_088,,TS_018,,Validate start and end date logic,"1) User is logged in
+","1. Navigate to Rules ? Create Gift Rule
+2. Click on Create
+3. Enter end date earlier than start date
+4. Click on Create Gift Rule","Gift Rule Name: 
+T-shirt Campaign
+Gift Name: 
+T-shirt
+Customer Limit: 2
+Start:
+20-04-2026 18:00 
+End:
+20-04-2026 16:00 
+",No,Negative,"Error message displayed
+Rule not created",System displays validation error to enter valid data,Pass,-,-
+TC_089,,TS_018,,Validate gift rule via QR scan,Active gift rule exists,"1. Scan QR code
+2. Enter customer details
+3. Submit 
+","Customer details
+Full Name: Hussain shaik
+Phone Number: 7880332189
+Purchase Amount: 800",No,Positive,"Gift is applied
+Confirmation message shown",Gift rule applied successfully,Pass,-,-
+TC_090,,TS_019,Verify that the search functionality works for gift rules,Search Gift Rule with valid data,"1) Gift rule exists
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Enter valid keyword search
+",Coffee mug,Yes,Positive,Result shows matching rules,Displays the rule matches to keyword,Pass,-,-
+TC_091,,TS_019,,Search Gift Rule with invalid data,"1) Gift rule exists
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Enter Invalid keyword search
+",N/A,Yes,Negative,No records found,No results displayed,Pass,-,-
+TC_092,,TS_019,,Filter by Active rules,"1) Gift rule is Active
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Apply Active filter
+",N/A,No,Positive,All active rules displayed,Rules were activated,Pass,-,-
+TC_093,,TS_019,,Filter Inactive rules,"1) Gift rule is Inactive
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Apply Inactive filter
+",Manyavar,No,Positive,Inactive rules filtered out and displays on screen,All rules were deactivated at once,Pass,-,-
+TC_094,,TS_020,Verify that the user/shop owner can manage gift rules,View Rule,"1) Gift rule exists
+
+
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Click on View
+",N/A,No,Positive,"Rule details modal opens
+All fields visible",Gift rules details were displayed,Pass,-,-
+TC_095,,TS_020,,Edit Rule (Valid),"1) Gift rule exists
+
+
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Click on Edit
+3) Enter valid details 
+","Rule Name: 24-7  DEALS
+Customer limit: 8
+Start Date & Time:    20-04-2026 02:00 PM
+End Date & Time:      20-04-2026 04:00 PM
+ ",Yes,Positive,Rule updated successfully,System displays success message as the rule is updated,Pass,-,-
+TC_096,,TS_020,,Edit Rule (In-Valid),"1) Gift rule exists
+
+
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Click on Edit
+3) Enter Invalid details 
+","Rule Name: 24/7  DEALS
+Customer limit: 0
+Start Date & Time:    20-04-2026 02:00 PM
+End Date & Time:      19-04-2026 04:00 PM
+ ",Yes,Negative,"Validation errors shown
+Update blocked",System rejects the invalid data,Pass,-,-
+TC_097,,TS_020,,Deactivate Rule,"1) Gift rule exists
+
+
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Select the active rule
+3) Click on Deactivate
+",s,No,Positive,Rule status changes to inactive,Inactive stores are displayed in result,Pass,-,-
+TC_098,,TS_020,,Activate Rule,"1) Gift rule exists
+
+
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Select the Deactive rule
+3) Click on Activate
+",N/A,No,Positive,Rule becomes active,Rule status changes to active,Pass,-,-
+TC_099,,TS_020,,Delete Rule,"1) Gift rule exists
+
+
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Select the rule
+3) Click on Delete
+",N/A,Yes,Positive,"Rule removed from list
+Cannot be accessed",Rule deleted successfully,Pass,-,-
+TC_100,,TS_020,,Verify Expired rule activation,"1) Gift rule expires
+
+
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Click on Activate
+",N/A,No,Positive,Rule becomes active,Rule remains expired after activation,Fail,BUG_007,"Expired gift rules show false ""activated successfully"" message"
+TC_101,,TS_020,,Activate Rule,"1) Gift rule exists
+
+
+
+","1) Navigate to Rules ? Create Gift Rule
+2) Click on Deactivate All
+",N/A,No,Positive,All Rules becomes active,Rule status changes to active,Pass,-,-
+TC_102,"Rules /
+Create Reward Rule",TS_021,Verify if the Reward rule page opens and shows all the metrics accurately,Verify reward rules page loads with correct metrics,"1) User is logged in
+2) Reward rules exist","1) Login as Shop Owner
+2) Navigate to Rules ? Create Reward Rules",N/A,Yes ,Positive,"Page loads successfully
+Active, inactive rules, customers, and points metrics are displayed correctly",Reward rule page open and display all metrics,Pass,-,-
+TC_103,,TS_022,Verify that the user/shop owner can create a reward rule,Verify reward rule creation with valid data,"1) User is logged in
+2) Store is active","1) Navigate to Create Reward Rule
+2) Select store
+3) Enter valid details
+4) Click Create
+","Store: Reliance (REL_05)
+Rule Name: Loyalty Program
+Spend per point: 100
+Points needed: 100
+Discount: 10",Yes ,Positive,Rule created successfully and visible in list,The system does not allow the creation of the reward rule and displays the warning message,Fail,BUG_037,User is unable to create reward rule
+TC_104,,TS_022,,Verify reward rule creation with invalid data,"1) User is logged in
+2) Store is active","1) Navigate to Create Reward Rule
+2) Select store
+3) Enter In-valid details
+4) Click Create
+","Store: swathi fashions
+Rule Name: Invalid rule
+Spend per point: 0
+Points needed: 0
+Discount: -10",Yes ,Negative,"Validation error shown
+Rule not created",Reward Rule creation is blocked,Pass,-,-
+TC_105,,TS_022,,Verify reward rule creation with empty fields,"1) User is logged in
+2) Store is active","1) Navigate to Create Reward Rule
+2) Select store
+3) Leave mandatory fields empty
+4) Click Create
+",N/A,Yes ,Negative,Required field validation messages displayed,"User remains on same page, as the sytem doesn’t create the rule with empty fields",Pass,-,-
+TC_106,,TS_022,,Verify reward rule not created for inactive store,"1) User is logged in
+2) Store is Inactive","1) Navigate to Create Reward Rule
+2) Check dropdown
+",N/A,No,Negative,Inactive stores not selectable or not shown in the dropdown,Inactive stores are displayed in the dropdown selection,Pass,-,-
+TC_107,,TS_023,Verify the Reward rule functionality by validating the QR code,Verify points earning calculation,"1) User logged in
+2) Reward rule is active
+","1) Naviagte to Stores  ? My stores
+2) Scan the QR of any store
+3) Enter customer details along with purchase amount","Store Name:  Reliance (REL_05)
+
+Customer details
+Full Name: Ganapathi
+Phone Number: 7880332189
+Purchase Amount: 100",No,Positive,Customer earns discountof 10 points,Customer received redeem points after scan,Pass,-,-
+TC_108,,TS_023,,Verify points redemption discount calculation,"1. User is logged in
+2. Reward rule is active
+3. User has sufficient points (e.g., 100+ points)
+4. Redemption configuration is set (e.g., 100 points = ?10)","1) Login as Shop Owner or Customer
+2) Navigate to store and scan QR code
+3) Enter purchase amount (e.g., ?1000)
+",Redemption rule: 100 points = ?10 discount,No,Positive,"
+The final payable amount should be reduced correctly after redemption.",The system calculates the discount correctly based on the redemption rule.,Pass,-,-
+TC_109,,TS_023,,Verify partial redemption and remaining points,"1) User has high points
+
+",1) Redeem partial points,789 points,No,Positive,"The correct discount is applied based on the redeemed points.
+
+The balance updates accurately without any calculation error.
+","
+The remaining points are displayed correctly after redemption.",Pass,-,-
+TC_110,,TS_023,,Verify reward rule works via QR scan,Rule is active,"1) Scan QR
+2) Enter purchase details
+",Amount: 500,No,Positive,Points earned based on rule,Customer earned redeem points on purchase ,Pass,-,-
+TC_111,,TS_023,,Verify behavior when no reward rule exists,No active rule,"1) Scan QR
+2) Enter purchase details
+",N/A,No,Positive,"Discount not applied 
+No points awarded",Customer doesn’t receive any discount/reward points,Pass,-,-
+TC_112,,TS_023,,Verify 24-hour limit functionality,Limit Enabled,1) Perform multiple transactions same day,N/A,No,Positive,Rule applies within the time limit,Reward points applies successfully,Pass,-,-
+TC_113,,TS_024,Verify that the search functionality works for reward rules,Verify search with valid rule name,Gift rules exists,"1) Navigate to Create Reward Rule
+2) Enter valid rule name in search
+",Loyalty,Yes ,Positive,Matching rules displayed,Keyword search displays the correct rule,Pass,-,-
+TC_114,,TS_024,,Verify search with invalid data,Gift rules exists,"1) Navigate to Create Reward Rule
+2) Enter In-valid rule name in search
+",xsndjwe33,Yes ,Negative,No results displayed,No rule records were shown,Pass,-,-
+TC_115,,TS_024,,Verify filter by active status,Gift rules exists,"1) Navigate to Create Reward Rule
+2) Apply activer filter
+",N/A,No,Positive,Only active rules shown,All active reward rules were shown,Pass,-,-
+TC_116,,TS_025,Verify that the user/shop owner can manage gift rule details,Verify view reward rule,Gift rules exists,"1) Navigate to Create Reward Rule
+2) Click on view
+",N/A,No,Positive,Rule modal opens and displays the rule data,View button is visible and clickable,Pass,-,-
+TC_117,,TS_025,,Verify edit reward rule with valid data,Gift rules exists,"1) Navigate to Create Reward Rule
+2) Click on Edit 
+3) Update the changes and submit
+","Store: Reliance (REL_05)
+Rule Name: Loyalty Program
+Spend per point: 100
+Points needed: 10
+Discount: 10",Yes ,Positive,Reward rule should accept the valid data,Rule updated successfully,Pass,-,-
+TC_118,,TS_025,,Verify edit with invalid data,Gift rules exists,"1) Navigate to Create Reward Rule
+2) Click on Edit 
+3) Enter invalid data and save changes
+","Store: Reliance (REL_05)
+Rule Name: Loyalty Program
+Spend per point: -100
+Points needed: 0
+Discount: 0",Yes ,Negative,Validation error displayed,Reward rule is not created with invalid data,Pass,-,-
+TC_119,,TS_025,,Verify deactivate reward rule,Rule is active,"1) Navigate to Create Reward Rule
+2) Click on deactivate
+",N/A,No,Positive,Rule status changes to inactive,Rule becomes inactive,Pass,-,-
+TC_120,,TS_025,,Verify activate reward rule,Rule is Inactive,"1) Navigate to Create Reward Rule
+2) Click activate
+",N/A,No,Positive,Rule becomes Active,Rule status changes to inactive successfully,Pass,-,-
+TC_121,,TS_025,,Verify delete reward rule,Gift rules exists,"1) Navigate to Create Reward Rule
+2) Click Delete
+",N/A,Yes ,Positive,Rule deleted and removed from list,Rule deletes and the count has been updated,Pass,-,-
+TC_122,Rules / Create Future Offers,TS_026,Verify if the Create offers rule page opens and shows all the metrics accurately,Verify Future Discount Rule page loads with correct metrics,"1. Owner user is logged in
+2. Future rules exist","1) Login as Shop Owner
+2) Navigate to Rules ? Future Discount Rules
+3) Observe page load
+4) Verify metric cards (Total, Active, Inactive, Expired)
+",N/A,Yes,Positive,"
+Metrics match backend data
+No blank or incorrect values",Page loads without UI issues,Pass,-,-
+TC_123,,TS_027,Verify that the user/shop owner can create a future discount rule,Verify user can create future discount rule with valid data,"1. Owner logged in
+2. Active store exists","1) Navigate to Create Future Discount rule
+2) Click on Create
+3) Fill all the details
+5) Submit
+","Rule: 30% OFF
+Item:Saree
+Min Amount: 2999
+Max Amount: 29999
+Coupon name: 30% OFF
+Discount:30% 
+Valid days: 30
+Min Purchase: 1999
+Customer limit: 20
+Start: 23-04-206 17:00
+End: 23-04-206 18:00
+
+",Yes,Positive,"Rule created successfully
+Appears in list","The already created future discount rule is not shown in the Future Offers Rule listing page. However, duplicate validation triggers when attempting to create a new rule with the same name.",Fail,BUG_048,"Existing future discount rule is not displayed in listing page, but duplicate name validation is triggered"
+TC_124,,TS_027,,Verify rule creation fails with invalid data,"1. Owner logged in
+2. Active store exists","1) Navigate to Create Future Discount rule
+2) Click on Create
+3) Select the store 
+4) Enter In-valid details
+5) Submit
+","Rule: 30% OFF
+Item: 283453+w-+_((*2
+Min Amount: -2999
+Max Amount: 29999
+Coupon name: 30% OFF
+Discount:30% 
+Valid days: 30
+Min Purchase: 1999
+Customer limit: 20
+Start: 23-04-206 17:00
+End: 23-04-206 18:00
+
+",Yes,Negative,"Validation errors shown
+Rule not created",Sytsem doesn’t create the future offers rule ,Pass,-,-
+TC_125,,TS_027,,Verify if user creates rule with empty mandatory fields,"1. Owner logged in
+2. Active store exists","1) Navigate to Create Future Discount rule
+2) Click on Create
+3) Leave mandatory fields empty
+4) Submit
+","Rule: 30% OFF
+Item: 283453+w-+_((*2
+Min Amount: 2999
+Max Amount: 999
+Coupon name: 30% OFF
+Discount:120%
+Valid days: 0
+Min Purchase: 0
+Customer limit: -5
+Start: 23-04-206 17:00
+End: 23-04-206 13:00
+
+",Yes,Negative,Validation error displays required fields to be filled,Rule is not created,Pass,-,-
+TC_126,,TS_027,,Create rule for inactive store,"1. Owner logged in
+2. Store is inactive","1) Navigate to Create Future Discount rule
+2) Click on Create
+3) Try to select inactive store from the dropdown
+",N/A,No,Negative,Store not selectable or rule not created,Inactive stores are not displayed in the dropdown,Pass,-,-
+TC_127,,TS_027,,Create rule with same name and  store,"1. Owner logged in
+2. Store is Active
+3. Rule already exists
+","1) Navigate to Create Future Discount rule
+2) Click on Create
+3) Enter all the valid details
+","Rule: 30% OFF
+Item:Saree
+Min Amount: 2999
+Max Amount: 29999
+Coupon name: Coffee Machine
+Discount:30% 
+Valid days: 30
+Min Purchase: 1999
+Customer limit: 20
+Start: 23-04-206 17:00
+End: 23-04-206 18:00
+
+",No,Negative,Duplication should not be allowed,"System raises validation error as the discount rule already exists, cannot be created",Pass,-,-
+TC_128,,TS_027,,Verify special characters in rule name,"1. Owner logged in
+2. Store is Active
+
+","1) Navigate to Create Future Discount rule
+2) Click on Create
+3) Enter invalid special characters in rule name
+","Rule: <script>alert(1)</script>
+
+
+",No,Negative,Input sanitized or rejected. No UI break,Rule doesn’t accepts with this invalid data,Pass,-,-
+TC_129,,TS_028,Verify the Future offers rule functionality by validating the QR code,Verify coupon is generated after valid purchase,"1. Rule is active
+2. QR available","1) Scan QR
+2) Enter purchase amount within range
+3) Complete transaction
+4) Check coupon generation
+","Name: Nandu
+Mobile: 85550012668
+Amount: 5000
+",No,Positive,Coupon mapped to customer,Coupon generated successfully,Pass,-,-
+TC_130,,TS_028,,Verify coupon generation at boundary values,"1. Rule is active
+","1) Scan QR
+2) Enter purchase amount below the limit
+
+","Name: Nandu
+Mobile: 85550012668
+Amount: 1000, 2998
+",No,Boundary,Customer doesn’t get any offers,No coupon code generated,Pass,-,-
+TC_131,,TS_028,,Verify coupon generation at boundary values,"1. Rule is active
+","1) Scan QR
+2) Enter purchase amount beyond the limit
+
+","Name: Nandu
+Mobile: 85550012668
+Amount: 29999, 50000
+",No,Boundary,Customer doesn’t get any offers,No coupon code generated,Pass,-,-
+TC_132,,TS_028,,Verify coupon usage on next purchase,Coupon generated,"1) Scan QR
+2) Enter purchase amount 
+
+","Name: Nandu
+Mobile: 85550012668
+Amount: 35000
+",No,Positive,Customer should avail the coupon usage ,Discount applied correctly,Pass,-,-
+TC_133,,TS_028,,Verify coupon expiry after valid days,Coupon exists,"1) Scan QR
+2) Enter purchase amount 
+
+","Name: Nandu
+Mobile: 85550012668
+Amount: 25000
+(Valid days: 30)
+",No,Negative,Expired coupon shall not apply,Coupon doesn’t exist or expired,Pass,-,-
+TC_134,,TS_028,,Verify customer limit enforcement,Customer limit reached,"1) Scan QR
+2) Enter purchase amount 
+
+","Name: Nandu
+Mobile: 85550012668
+Amount: 28000
+(Customer limit: 20)
+",No,Negative,Customers cannot avail the coupon code as the customer limit has already been reached,No new coupons issued,Pass,-,-
+TC_135,,TS_029,Verify that the search functionality works for future discount rules,Verify search with valid rule name,Rules exist,"1) Navigate to Create Future Offers
+2) Enter rule name in search
+",30% OFF,Yes,Positive,System filters out the rule accordingly,Matching rule displayed,Pass,-,-
+TC_136,,TS_029,,Verify search with invalid data,Rules exist,"1) Navigate to Create Future Offers
+2) Enter random string",xyz123,Yes,Negative,No results found,No rule records were shown,Pass,-,-
+TC_137,,TS_029,,Verify filter by Active status,Mixed rules exist,"1) Navigate to Create Future Offers
+2) Apply Active filter",N/A,No,Positive,Rule status changes to Active,Only active rules shown,Pass,-,-
+TC_138,,TS_029,,Verify filter by In-Active status,Mixed rules exist,"1) Navigate to Create Future Offers
+2) Apply Inactive filter",N/A,No,Negative,Rule status changes to In-Active,Inactive rules filtered out and displays on screen,Pass,-,-
+TC_139,,TS_030,Verify that the user/shop owner can manage future discount rule details,Verify view rule details,Rules exist,"1) Navigate to Create Future Offers
+2) Click on View Icon in the rules display list",N/A,No,Positive,Rule details modal opens,Future offers rule data info is displayed,Pass,-,-
+TC_140,,TS_030,,Verify edit rule with valid data,Rules exist,"1) Navigate to Create Future Offers
+2) Click on Edit Icon in the rules display list
+3) Update the changes with valid data and Submit","Rule: Discount Sale
+Item:Saree
+Min Amount: 2999
+Max Amount: 29999
+Coupon name: Coffee Machine
+Discount: 25%
+Valid days: 30
+Min Purchase: 1999
+Customer limit: 20
+Start: 23-04-206 17:00
+End: 23-04-206 18:00
+
+",Yes,Positive,Future offers rule accepts the valid data and updates,Rule updated successfully,Pass,-,-
+TC_141,,TS_030,,Verify edit rule with invalid data,Rules exist,"1) Navigate to Create Future Offers
+2) Click on Edit Icon in the rules display list
+3) Enter invalid values and Submit","Rule: Discount Sale
+Item:Saree
+Min Amount: -2999
+Max Amount: 29999
+Coupon name: Coffee Machine
+Discount: 25%
+Valid days: 30
+Min Purchase: 1999
+Customer limit: 20
+Start: 23-04-206 17:00
+End: 23-04-206 18:00
+
+",Yes,Negative,System doesn’t allow invalid data,Sytsem displays validation error message,Pass,-,-
+TC_142,,TS_030,,Verify deactivate rule,Rules is active,"1) Navigate to Create Future Offers
+2) Click on deactive icon
+",N/A,No,Positive,Rule status changes to inactive,Rule becomes inactive,Pass,-,-
+TC_143,,TS_030,,Verify activate rule,Rules is In-active,"1) Navigate to Create Future Offers
+2) Click on Active icon
+",N/A,No,Positive,Rule status changes to Active,Rule becomes Active,Pass,-,-
+TC_144,,TS_030,,Verify delete rule,Rules is active,"1) Navigate to Create Future Offers
+2) Click on Delete icon
+",N/A,Yes,Positive,Rule removed. Count updated,Rule deletes successfully,Pass,-,-
+TC_145,Rules /Create Birthday Discount Rule,TS_031,Verify if the Birthday rule page opens and shows all the metrics accurately,Verify Birthday Rule page loads successfully,Owner logged in,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+",N/A,Yes,Positive,Page loads without errors. All fields visible,Birthday rule page loads successfully,Pass,-,-
+TC_146,,TS_031,,Verify metrics when no rules exist (Empty State),No birthday rules created,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+",N/A,No,Positive,“Create Your First Birthday Rule” button visible,Empty state displayed,Pass,-,-
+TC_147,,TS_032,Verify that the user/shop owner can create a birthday discount rule,Verify creation with valid discount data,Active store exists,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Enter rule name
+5) Select Discount
+6) Enter percentage
+7) Enter customer limit
+8) Click Create
+","Rule: Birthday Discount
+Offer type: Discount
+Percentage: 15%
+Customer limit: 300",Yes,Positive,Discount rule created and appears in the list,Birthday Discount Rule created successfully,Pass,-,-
+TC_148,,TS_032,,Verify creation with valid gift data,Active store exists,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Enter rule name
+5) Select Free Gift
+6) Enter Gift Name
+7) Enter customer limit
+8) Click Create
+","Rule: Birthday Free GIFT
+Offer type: Free Gift
+Gift Name: Free Scrunchies
+Gift Description: Hair Accessories
+Customer limit: 200",Yes,Positive,Birthday rule created and appears in the list,Birthday Free gift Rule created successfully,Pass,-,-
+TC_149,,TS_032,,Verify creation with empty fields,Active store exists,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Leave empty fields
+5) Click Create
+",N/A,Yes,Negative,System restricts the user to create the rule,Validation errors shown. Rule not created,Pass,-,-
+TC_150,,TS_032,,Verify invalid discount percentage,Active store exists,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Enter rule name
+5) Select Discount
+6) Enter percentage
+7) Enter customer limit
+8) Click Create
+","Rule: Birthday Discount
+Offer type: Discount
+Percentage: 0
+Customer limit: 100
+",No,Negative,Discount fields displays error message ,Validation error displayed,Pass,-,-
+TC_151,,TS_032,,Verify invalid customer limit,Active store exists,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Enter rule name
+5) Select Free Gift
+6) Enter Gift Name
+7) Enter customer limit
+8) Click Create
+","Rule: Birthday Discount
+Offer type: Discount
+Percentage: 15
+Customer limit: 0
+",No,Negative,Rule cannot be created with 0 customer limit,Validation error displayed,Pass,-,-
+TC_152,,TS_032,,Verify duplicate rule creation,Rule already exists,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Enter rule name
+5) Select Discount
+6) Enter percentage
+7) Enter customer limit
+8) Click Create
+","Rule: Birthday Discount
+Offer type: Discount
+Percentage: 15%
+Customer limit: 300",No,Negative,Duplicate rule not allowed,System displays error message as the rule name already exists,Pass,-,-
+TC_153,,TS_032,,Verify image upload validation,Active store exists,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Enter rule name
+5) Select Free Gift
+6) Enter Gift Name
+7) Upload valid image size
+8) Enter customer limit
+9) Click Create
+","Rule: Birthday Free GIFT
+Offer type: Free Gift
+Gift Name: Free Scrunchies
+Gift Description: Hair Accessories
+Customer limit: 200",No,Positive,System accepts valid file format within the size,Image loads succesfully,Pass,-,-
+TC_154,,TS_032,,Verify image upload validation,Active store exists,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Enter rule name
+5) Select Free Gift
+6) Enter Gift Name
+7) Upload image size beyond requirements
+8) Enter customer limit
+9) Click Create
+","Rule: Birthday Free GIFT
+Offer type: Free Gift
+Gift Name: Free Scrunchies
+Gift Description: Hair Accessories
+Customer limit: 201",No,Negative,File is not supported validation error shown ,System rejects the invalid format file,Pass,-,-
+TC_155,,TS_032,,Verify special characters in rule name,Page Open,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store
+4) Enter Invalid rule name
+5) Click Create
+","Rule: <script>alert(1)</script>
+Offer type: Discount
+Percentage: 15%
+Customer limit: 301",No,Negative,Input sanitized or rejected,Rule cant be created,Pass,-,-
+TC_156,,TS_032,,Verify inactive store restriction,Store is Inactive,"1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Select store dropdown
+",N/A,No,Negative,Inactive stores should not be shown in the dropdown,Inactive stores not selectable,Pass,-,-
+TC_157,,TS_033,Verify the Birthday discount rule functionality and validate the QR code,Verify discount applied on customer birthday,"1. Rule is active
+2. Customer birthday today","1) Scan QR
+2) Enter customer details
+3) Complete transaction
+","Name: Nandu
+Mobile: 8555001268
+Amount: 2500
+DOB: 25-04-2006
+",No,Positive,Birthday discount should applied for customer with valid data,Discount applied successfully,Pass,-,-
+TC_158,,TS_033,,Verify gift applied on birthday,"1. Rule is active
+2. Customer birthday today","1) Scan QR
+2) Enter customer details
+3) Complete transaction
+","Name: Nandu
+Mobile: 8555001268
+Amount: 2500
+DOB: 25-04-2006
+",No,Positive,Success message displays on screen,Gift displayed/assigned to customer,Pass,-,-
+TC_159,,TS_033,,Verify no benefit for non-birthday,"1. Rule is active
+","1) Scan QR
+2) Enter customer details
+3) Complete transaction
+","Name: Sravanthi
+Mobile: 9333021843
+Amount: 3000
+DOB: 25-06-2006
+",No,Positive,"Any other discount rule can be applied if active and applicable
+",Birthday rule discount or gift not applied,Pass,-,-
+TC_160,,TS_033,,Verify customer limit per year,1.Limit reached,"1) Scan QR
+2) Enter customer details
+3) Complete transaction
+","Name: Harish
+Mobile: 9555021843
+Amount: 2200
+
+",No,Positive,User cannot avail benefit again,System displays no discount available,Pass,-,-
+TC_161,,TS_033,,Verify one-time usage per year per customer,1.Customer already used benefit,"1) Scan QR
+2) Enter customer details
+3) Complete transaction
+","Name: Nandu
+Mobile: 8555001268
+Amount: 2500
+DOB: 25-04-2006
+",No,Positive,Rule cannot be applied to customer,Birthday rule discount or gift not applied,Pass,-,-
+TC_162,,TS_034,Verify that the search functionality works for birthday discount rules,Verify search with valid rule name,"1. Rule exists
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Enter valid rule name in search bar",Rule name: Birthday Discount,Yes,Positive,Matching rule displayed,Keyword search displays the correct rule,Pass,-,-
+TC_163,,TS_034,,Verify search with invalid data,"1. Rule exists
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Enter In-valid rule name or random text in search bar",Rule name: xyz123,Yes,Negative,Invalid data should not display any records,No results found,Pass,-,-
+TC_164,,TS_034,,Verify Active rules appears using filter,"1. Rule is Active
+
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Apply Active filter ",N/A,No,Positive,Active filter displays active rules,Only active rules displayed,Pass,-,-
+TC_165,,TS_034,,Verify In-Active rules appears using filter,"1. Rule is Inactive
+
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Apply Inactive filter ",N/A,No,Positive,Inactive button filters out inactive rules,All inactive rules displayed,Pass,-,-
+TC_166,,TS_035,Verify that the user/shop owner can manage birthday discount rule details,Verify view birthday rule,"1. Rule exists
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Click on View button",N/A,No,Positive,Rule details modal opens successfully,View button open birthday rule modal,Pass,-,-
+TC_167,,TS_035,,Verify edit rule with valid data,"1. Rule exists
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Click on Edit button
+4) Update fields
+5) Save",Discount: 25%,Yes,Positive,System accepts valid data and success message displays,Birthday Rule updated successfully,Pass,-,-
+TC_168,,TS_035,,Verify edit rule with Invalid data,"1. Rule exists
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Click on Edit button
+4) Enter Invalid values
+5) Save",Discount: 125%,Yes,Negative,System doesn’t accept invalid data,Validation error message shown,Pass,-,-
+TC_169,,TS_035,,Verify deactivate rule,"1. Rule exists and is active 
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Click on Deactivate button
+",N/A,No,Positive,Rule status changes to Inactive,Rule becomes inactive,Pass,-,-
+TC_170,,TS_035,,Verify activate rule,"1. Rule exists and is deactived
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Click on Activate button
+",N/A,No,Positive,Rule becomes active,Rule status changes to Active,Pass,-,-
+TC_171,,TS_035,,Verify delete rule,"1. Rule exists
+","1) Login as Shop Owner
+2) Navigate to Rules ? Create Birthday Rule
+3) Click on Delete button
+",N/A,Yes,Positive,Rule removed and count updated,Birthday Discount Rule deleted successfully,Pass,-,-
+TC_172,Employees / Employee Management,TS_036,Verify if the employee management displays the employee data and all stores,Verify Employee Management page loads with all stores and metrics,"1. Owner logged in
+2. Stores exist","1) Login as Owner
+Navigate to Employees ? Employee Management
+2) Observe metrics and store cards
+",N/A,Yes,Positive,"Page loads successfully
+Metrics displayed: Total Stores, Total Employees, Stores with Staff, QR Codes Active
+All stores are listed as cards",Employee management page opens and displays metrics accurately,Pass ,-,-
+TC_173,,TS_036,,Verify employee count updates per store,1. Employees exist under store,"1) Login as Owner
+Navigate to Employees ? Employee Management
+2) Observe the employees count under each store
+",N/A,No,Positive,Employee count reflects correctly per store,Data metrics match exactly,Pass ,-,-
+TC_174,,TS_037,Verify that the user/shop owner can add a new employee,Verify user can add employee with valid data,"1. Owner logged in
+2. Stores exist","1) Click “Add Employee”
+2) Select store from the dropdown
+3) Fill all mandatory fields
+4) Upload face photo
+5) Click Add Employee
+","Store: alanati
+Name: Ramesh Kumar
+Phone: 9876543210
+Role: Worker
+Password: test123
+",Yes,Positive,"Employee created successfully
+Employee appears under store",Failed to add employee,Fail,BUG_057,Store selection dropdown is not available
+TC_175,,TS_037,,Verify validation for empty mandatory fields,"1. Owner logged in
+2. Stores exist","1) Click “Add Employee”
+2) Select store from the dropdown
+3) Leave all mandatory fields empty
+4) Click Add
+",N/A,Yes,Positive,"Validation messages displayed
+Employee not created",System displays error message as all fields required to be filled,Pass ,-,-
+TC_176,,TS_037,,Verify invalid phone number validation,"1. Owner logged in
+2. Stores exist","1) Click “Add Employee”
+2) Select store from the dropdown
+3) Enter invalid mobile number
+4) Upload face photo
+5) Click Add Employee
+","Store: alanati
+Name: Ramesh Kumar
+Phone: 9876+P-210
+Role: Worker
+Password: test123
+",Yes,Negative,Error shown for invalid phone,Phone number field displays validation error message,Pass ,-,-
+TC_177,,TS_037,,Verify password minimum length validation,"1. Owner logged in
+2. Stores exist","1) Click “Add Employee”
+2) Select store from the dropdown
+3) Enter Invalid password
+4) Upload face photo
+5) Click Add Employee
+","Store: alanati
+Name: Harish Yadav
+Phone: 9883200210
+Role: Supervisor
+Password: 123
+",No,Negative,Validation error displayed,System rejects invalid character limit ,Pass ,-,-
+TC_178,,TS_037,,Verify face photo is mandatory,"1. Owner logged in
+2. Stores exist","1) Click “Add Employee”
+2) Select store from the dropdown
+3) Fill all mandatory fields
+4) Click Add Employee
+","Store: alanati
+Name: Harish Yadav
+Phone: 9883200210
+Role: Supervisor
+Password: 123
+",No,Negative,System shouldn't add employee without face ID validation ,System blocks creation,Pass ,-,-
+TC_179,,TS_037,,Verify duplicate employee creation,1. Employee already exists,"1) Click “Add Employee”
+2) Select store from the dropdown
+3) Fill all mandatory fields
+4) Click Add Employee
+","Store: alanati
+Name: Ramesh Kumar
+Phone: 9876543210
+Role: Worker
+Password: test123
+",No,Negative,System rejects duplication,Duplication not allowed,Pass ,-,-
+TC_180,,TS_038,Verify that the user/shop owner can search and view employee details using filters,Verify search functionality by store name,"1. Owner logged in
+2. Stores exist","1) Login as Owner
+Navigate to Employees ? Employee Management
+2) Enter store name in search
+","Store: alanati
+",Yes,Positive,Matching store displayed along with employee details,Relevant store displayed in the search result,Pass ,-,-
+TC_181,,TS_038,,Verify search with invalid input,"1. Owner logged in
+2. Stores exist","1) Login as Owner
+Navigate to Employees ? Employee Management
+2) Enter Invalid store name in search
+","Store: 23123__((*((gvy
+",Yes,Negative,Results shouldn’t be found,No results shown,Pass ,-,-
+TC_182,,TS_038,,Verify “View Staff” button navigation,"1. Owner logged in
+2. Stores exist","1) Login as Owner
+Navigate to Employees ? Employee Management
+2) Click View staff
+",N/A,No,Positive,Employee list page opens,Employees data reveals under the store card,Pass ,-,-
+TC_183,Employees / Attendance History,TS_039,Verify that the user/shop owner can view and track employee attendance across stores,Verify attendance history page loads,"1. Owner logged in
+2. Employee data exist","1) Login as Owner
+Navigate to Employees ? Attendance History
+
+",N/A,Yes,Positive,"Page loads
+Summary cards visible",Employee Attendance history page opens successfully,Pass,-,-
+TC_184,,TS_039,,Verify attendance summary metrics,"1. Owner logged in
+2. Employee data exist","1) Login as Owner
+Navigate to Employees ? Attendance History
+2) Observe employee attendance metrics
+
+",N/A,No,Positive,Values reflect actual attendance data,Employee attendance metrics match accurately,Pass,-,-
+TC_185,,TS_039,,Verify store-wise breakdown,"1. Owner logged in
+2. Employee data exist","1) Login as Owner
+Navigate to Employees ? Attendance History
+2) Scroll to breakdown table
+
+",N/A,No,Positive,"Correct data displayed per store
+Columns: Total, Present, Absent, %",Switching tabs displays related store staff attendance metrics,Pass,-,-
+TC_186,,TS_039,,Verify refresh functionality,"1. Owner logged in
+2. Employee data exist","1) Login as Owner
+Navigate to Employees ? Attendance History
+2) Click refresh
+
+",N/A,No,Edge,Data reloads correctly,Data remains unchanged after refreshing the page,Pass,-,-
+TC_187,,TS_039,,Verify attendance when no employees exist,"1. Owner logged in
+2. Employee data not exist","1) Login as Owner
+Navigate to Employees ? Attendance History
+2) Observe the employee metrics
+
+",N/A,No,Edge,"All values shown as 0
+No crash",Sytsem handles and displays the attendance metrics gracefully,Pass,-,-
+TC_188,Employees / Employee Leaves,TS_040,Verify if Employee leaves page loads and displays employee records across stores,Verify Employee Leaves page loads,"1. Owner logged in
+","1) Login as Owner
+Navigate to Employees ? Employee Leaves
+2) Observe the employee leave data
+
+",N/A,Yes,Positive,"Page loads
+Store tabs visible
+Calendar visible",Employee leaves requests page opens successfully,Pass,-,-
+TC_189,,TS_041,Verify that the user/shop owner can add leave or holiday records,Verify adding Paid Leave,"1. Owner logged in
+2. Store exists
+","1) Select employee
+2) Select Paid Leave
+3) Choose date
+4) Click Add
+","Employee: Hussain
+Date: 27-04-2026
+",Yes,Positive,Success message displays on screen,Leave added successfully,Pass,-,-
+TC_190,,TS_041,,Verify adding Holiday,"1. Owner logged in
+2. Store exists
+","1) Select employee
+2) Select Holiday
+3) Choose date
+4) Click Add
+","Employee: Hussain
+Date: 26-04-2026
+",Yes,Positive,Holiday recorded,Holiday records added successfully,Pass,-,-
+TC_191,,TS_041,,Verify adding Week Off,"1. Owner logged in
+2. Store exists
+","1) Select employee
+2) Select Weekoff
+3) Choose date
+4) Click Add
+","Employee: Hussain
+Date: 28-04-2026
+",Yes,Positive,Week off saved,Week off records added successfully,Pass,-,-
+TC_192,,TS_041,,Verify multiple date selection,"1. Owner logged in
+2. Store exists
+","1) Select employee
+2) Select Paid Leave
+3) Choose more than one date
+4) Click Add
+","Employee: Hussain
+Date: 
+28-04-2026
+29-04-2026
+30-04-2026
+",No,Positive,All dates recorded,Paid leave with multiple dates recorded successfully,Pass,-,-
+TC_193,,TS_041,,Verify validation when employee not selected,"1. Owner logged in
+2. Store exists
+","1) Select Paid Leave
+2) Choose date
+3) Click Add
+",N/A,No,Negative,Error message displayed,System doesn’t allow to add the leave record ,Pass,-,-
+TC_194,,TS_042,Verify that the user/shop owner can view and download employee leave records,Verify leave records display,"1. Owner logged in
+2.  Leave record exists
+
+","1) Login as Owner
+Navigate to Employees ? Employee Leaves
+2) Go to Leave Records tab
+
+",N/A,No,Positive,All leave entries listed,This page captures all employees leave records across stores,Pass,-,-
+TC_195,,TS_042,,Verify CSV download functionality,"1. Owner logged in
+2.  Leave record exists
+
+","1) Login as Owner
+Navigate to Employees ? Employee Leaves
+2) Click Download CSV 
+
+",N/A,No,Positive,"File downloads
+Data matches UI",File downloaded successfully in the correct format,Pass,-,-
+TC_196,,TS_042,,Verify month navigation,"1. Owner logged in
+2.  Leave record exists
+
+","1) Login as Owner
+Navigate to Employees ? Employee Leaves
+2) Change month
+
+",N/A,No,Positive,Data updates based on month,Employee leave data across month tabs displays,Pass,-,-
+TC_197,,TS_042,,Verify store-wise leave filtering,"1. Owner logged in
+2.  Leave record exists
+
+","1) Login as Owner
+Navigate to Employees ? Employee Leaves
+2) Switch store tabs
+
+",N/A,No,Positive,Only selected store data shown,Select store data employee leave info displays,Pass,-,-
+TC_198,Create Pass / Pass System,TS_043,Verify if the Pass system page loads and displays pass related data ,Verify pass system page loads,"1. User logged in as shop owner
+2. At least one store exists","1) Login as Owner
+Create Pass ? Pass System
+2) Observe page load
+3) Verify:
+Pass templates section
+Assigned passes section
+Store-level grouping
+Search bar
+Action buttons (Create Pass, Assign Pass)
+",N/A,Yes,Positive,"Page loads without errors
+All UI components visible
+Correct data displayed",Page loaded successfully displaying all fields,Pass,-,-
+TC_199,,TS_044,Verify that the user/shop owner can create a pass ,Verify Create Pass Template with valid data,1. Store exists,"1) Click Create Pass
+2) Select store
+3) Enter pass details
+4) Click Create
+","Store: Fashion doll
+Pass Name: Gold Membership
+Item Name: Gold Coin
+Price: ?999
+Validity: 30 days",Yes,Positive,"Pass visible in list
+Data saved correctly",Pass created successfully,Pass,-,-
+TC_200,,TS_044,,Create Pass Template with Invalid inputs,1. Store exists,"1) Click Create Pass
+2) Select store
+3) Enter Invalid details
+4) Click Create
+","Store: Fashion doll
+Pass Name: Milk Subscription
+Item Name: Milk
+Price: -500
+Validity: 0 days",Yes,Negative,Input rejected and validation message displays,Pass creation failed,Pass,-,-
+TC_201,,TS_044,,Verify create pass leaving mandatory fields empty,1. Store exists,"1) Click Create Pass
+2) Select store
+3) Leave mandatory fields empty
+4) Click Create
+",N/A,Yes,Negative,Proper validation messages should be displayed,System display warning message to fill the required fields,Pass,-,-
+TC_202,,TS_045,Verify that the user/shop owner can assign a pass to a customer,Assign Pass to Customer,"1. Pass template exists
+2. Customer exists","1) Click Assign Pass
+2) Select Pass template
+3) Enter Customer mobile number
+4) Clickon Assign
+5) Activate the pass
+","Store: Tea
+Phone: 9666025113",No,Positive,Entry visible under assigned passes,Pass assigned successfully,Pass,-,-
+TC_203,,TS_045,,Verify Email trigger functionality,"1. Pass template exists
+2. Customer exists
+3. Pass Assigned","1) Check Customer Email
+",N/A,No,Positive,"Email received
+Contains:
+Login credentials
+Pass details",Email verification successful with login data,Pass,-,-
+TC_204,,TS_045,,Verify Customer Login functionality,1. Customer login credentials exists,"1) Open login page
+2) Enter credentials",N/A,No,Positive,Customer dashboard loads,Login successful,Pass,-,-
+TC_205,,TS_045,,Verify Pass Visibility,1. Customer logged in,1) Navigate to My Passes,N/A,No,Positive,"Assigned pass visible
+Details correct:
+Validity
+Status
+Store",Customer khata account displays all fields,Pass,-,-
+TC_206,,TS_046,Verify the search functionality and filters,Verify the search functionality with valid keyword,1. Pass data exists,"1) Login as Owner
+Create Pass ? Pass System
+2) Enter pass name in search bar
+",Pass name: Biryani,Yes,Positive,"Correct results displayed
+",Matching pass template filters in the list,Pass,-,-
+TC_207,,TS_046,,Verify the search functionality with Invalid keyword,1. Pass data exists,"1) Login as Owner
+Create Pass ? Pass System
+2) Enter Invalid pass name in search bar
+","Pass name: sdwdj92i,;l",Yes,Negative,Empty state for no results,No irrelevant records,Pass,-,-
+TC_208,,TS_047,Verify that the user/shop owner can manage subscription passes across stores,Verify Viewing Pass Details,"1. User logged in as shop owner
+2. At least one pass is assigned to a customer","1) Navigate to Pass System page
+2) Locate an assigned pass
+3) Click on the pass (View option)",N/A,No,Positive,The assigned pass details should be displayed correctly when clicking View.,The view page does not show the pass details and displays a wrong validation message.,Fail,BUG_026,Pass view does not show details and displays wrong validation message
+TC_209,,TS_047,,Verify Editing Pass Details,1. Pass exists and is editable,"1) Navigate to Pass System
+2) Select an existing pass
+3) Click Edit
+4) Modify pass details 
+5) Click Save
+",Validity Days: 60,Yes,Positive,"
+Updated data reflected in UI
+No data loss or corruption",Pass template updated successfully,Pass,-,-
+TC_210,,TS_047,,Verify Editing Pass Details with invalid data,1. Pass exists and is editable,"1) Navigate to Pass System
+2) Select an existing pass
+3) Click Edit
+4) Modify pass details 
+5) Click Save
+",Validity Days: 0,Yes,Negative,Changes can not be updated,System doesn’t accepts the invalid data and the page remains unchanged,Pass,-,-
+TC_211,,TS_047,,Verify Deactivate Pass,1. Pass exists ,"1) Navigate to Pass list
+2) Select a pass
+3) Click Deactivate toggle",N/A,No,Positive,"Status updates immediately
+UI reflects new status ( Inactive)
+Change persists after refresh","Success message displays as ""Pass template deactivated successfully""",Pass,-,-
+TC_212,,TS_047,,Verify Activate  Pass,1. Pass exists ,"1) Navigate to Pass list
+2) Select a pass
+3) Click Activate toggle",N/A,No,Positive,"Status updates immediately
+UI reflects new status (Active)
+Change persists after refresh","Success message displays as ""Pass template Activated successfully""",Pass,-,-
+TC_213,,TS_047,,Verify Pass Expiry,1. Pass assigned with defined validity,"1) Allow pass validity to expire
+OR
+2) Manually mark pass as expired (if feature exists)",N/A,No,Positive,"
+Pass cannot be used
+Expired label visible in UI",Pass status changes to Inactive,Pass,-,-
+TC_214,,TS_047,,Verify Duplicate Creation,"1. Pass template exists
+2. Customer exists","1) Assign pass to a customer
+2) Attempt to assign the same pass again to same customer",N/A,No,Negative,System Allows but creates separate valid entries (based on business rule),System displays error message as dupilcation not allowed,Pass,-,-
+TC_215,,TS_047,,Verify Pass deletion ,"1. Pass template exists
+2. Customer exists","1) Go to Customer Passes
+2) Select the customer pass and click delete button",N/A,Yes,Positive,The system should display a correct success or confirmation message after a pass is deleted.,"After deleting a pass, the system shows a wrong validation message instead of a confirmation of the deletion.",Fail,BUG_025,Wrong validation message shown after deleting pass
+TC_216,,,,Verify customer pass cancellation,"1. Pass template exists
+2. Customer exists","1) Go to Customer Passes
+2) Select the customer pass and click on cancel button",N/A,Yes,Positive,"The system should display the pass details in view mode. If viewing cancelled passes is not allowed, a clear message should be shown.","The pass details are not shown. Instead, an incorrect validation message is displayed.",Fail,BUG_027,Cancelled customer pass view shows wrong validation message
+TC_217,,TS_047,,Verify Expired Pass Usage Restriction,1. Pass is expired,1) Attempt to use expired pass,N/A,No,Negative,"System blocks usage
+Proper message displayed",Sytem doesn’t show expired pass in the dropdown ,Pass,-,-
+TC_218,,TS_047,,Verify Email Failure Handling,1. Email service failure simulated,"1) Assign pass to customer
+2) Trigger email notification",N/A,No,Negative,"System shows error OR retry mechanism
+No silent failure
+Pass assignment still consistent","System displays error message as ""failed to do email verification""",Pass,-,-
+TC_219,,TS_047,,Assign Pass to Non-Existing Customer,1. Customer does not exist in system,"1) Attempt to assign pass
+2) Enter invalid or non-existing customer",N/A,No,Negative,"System blocks action
+Proper validation message displayed",Pass assigned to unknown or unregistered customer,Fail,BUG_058,System assigns pass to unregistered customer
+TC_220,,TS_047,,Verify Pass Visibility Across Multiple Stores,"1. Multiple stores exist
+2. Pass assigned to one store","1) Navigate between stores
+2) Check pass visibility",N/A,No,Negative,"Pass visible only under assigned store
+No cross-store data leakage",Pass assigned to specific store data apears ,Pass,-,-
+TC_221,Create Khata / Credit Book,TS_048,Verify if the Customer khata page loads display customer accounts,Verify Khata Page Load,"1. User logged in as shop owner
+2. At least one store exists","1) Navigate to Create Khata / Credit Book
+2) Observe page load
+3) Verify UI sections:
+Customer khata list
+Store-wise grouping
+Search bar
+Filters ",N/A,Yes,Positive,"All UI elements visible
+
+Data displayed correctly","Page loads without errors
+",Pass,-,-
+TC_222,,TS_048,,Verify Empty State,1. No khata records exist,"1) Navigate to Create Khata / Credit Book
+2) Observe khata page
+",N/A,No,Positive,"Proper empty state message shown
+CTA like “Create Khata” visible",System handles the empty state gracefully,Pass,-,-
+TC_223,,TS_049,Verify that the user/shop owner can create a customer khata account,Create New Khata Account with valid data,"1. Customer exists
+2. Store exists","1) Navigate to Create Khata / Credit Book
+2) Create Khata
+3) Select store from the dropdown
+4) Enter valid details
+5) Save
+","Customer Name: John Doe
+phone number: 9356602243
+email: testuser@gmail.com
+",Yes,Positive,"Record visible in list
+Data stored correctly","The Khata account is shown in the Khata page, but it is not reflected in the Customers dashboard.",Fail,BUG_028,Created Khata account not reflected in Customers dashboard
+TC_224,,TS_049,,Create Khata Account with invalid data,"1. Customer exists
+2. Store exists","1) Navigate to Create Khata / Credit Book
+2) Create Khata
+3) Select store from the dropdown
+4) Enter Invalid details
+5) Save
+","Customer Name: John Doe
+phone number: 93566
+email: testuser@gmail
+",Yes,Negative,System doesn’t accept invalid data,The system currently accepts unlimited numeric and special characters in the customer name field without any restrictions.,Fail,BUG_009,Khata customer name accepts excessive numeric/special characters without limits
+TC_225,,TS_049,,Mandatory Field Validation,"1. Customer exists
+2. Store exists","1) Navigate to Create Khata / Credit Book
+2) Create Khata
+3) Select store from the dropdown
+4) Leave required fields empty
+5) Save
+",N/A,Yes,Negative,Validation errors displayed,Khata account not created,Pass,-,-
+TC_226,,TS_050,Verify that the search functionality and filters works for khata records across stores,Search Khata Records,"1. Customer exists
+2. Store exists","1) Enter store/customer name in search
+2) Enter partial keyword",Store name: fashion ,Yes,Positive,"Matching records displayed
+No irrelevant results",Display matching record ,Pass,-,-
+TC_227,,TS_050,,Filter by Store,1. Multiple stores exist,1) Apply store filter,N/A,No,Positive,Customer khata account filters based on store selection,Only selected store data visible,Pass,-,-
+TC_228,,TS_050,,Non existing customer search,"1. Customer do not exists
+2. Store exists",1) Search non-existing customer,Customer name: djnfv_GE7454,No,Negative,“No records found” message shown,No resutls displayed ,Pass,-,-
+TC_229,,TS_051,Verify that the user/shop owner can manage customer khata accounts,View Khata Details,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Select a customer Khata
+3) Click on View
+",N/A,No,Positive,All metric displayed properly,Customer khata account details are viewed,Pass,-,-
+TC_230,,TS_051,,Add Credit Entry,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Select a customer Khata
+3) Provide valid data
+4) Click Submit/Save
+","Customer Name: Micheal Smith
+phone number: 9353265643
+email: testuser@gmail.com
+Credit Limit: 10000
+",No,Positive,"Entries recorded correctly
+Balance updated accurately",System doesn’t add the records to the entry,Fail,BUG_050,Failed to create purchase record while adding purchase details to customer Khata account
+TC_231,,TS_051,,Edit Khata Record,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Select a customer Khata
+3) Click on Edit
+4) Update the changes
+5) Save
+","Credit Limit: 15000
+",Yes,Positive,Audit consistency maintained,Khata account updated correctly,Pass,-,-
+TC_232,,TS_051,,Delete Khata / Transaction,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Select a customer Khata
+3) Click on Delete
+",N/A,No,Positive,"Record cannot be deleted 
+Data consistency maintained","The delete action is missing in the Khata list. In the view popup, it is shown as a refresh icon instead of a delete icon.",Fail,BUG_024,Delete action is missing in Khata list and shown as wrong icon in view page
+TC_233,,TS_051,,Delete Khata / Transaction,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Select a customer Khata
+3) Click on Delete
+",N/A,No,Positive,"Record cannot be deleted 
+Data consistency maintained",Khata account deleted successfully,Fail,BUG_059,Account consists data should not be deleted
+TC_234,,TS_051,,Verify Add purchase entry,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Select a customer Khata
+3) Provide valid data
+4) Click Submit/Save
+","Customer Name: Micheal Smith
+phone number: 9353265643
+email: testuser@gmail.com
+Credit Limit: 10000
+",No,Positive,Purchase entry adds to cutomer khata account succesfully,"When users click the ""Add Purchase"" button, a generic error message appears: ""Failed to record transaction."" No transaction is saved to the ledger.",Fail,BUG_010,Add Entry fails to record transactions in Khata with generic error
+TC_235,,TS_051,,Duplicate Khata Creation,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Create Khata
+3) Select store from the dropdown
+4) Enter valid details
+5) Save
+","Customer Name: John Doe
+phone number: 9356602243
+email: testuser@gmail.com
+",No,Negative,System should prevent suplication,Duplication of khata account not allowed,Pass,-,-
+TC_236,,TS_051,,Negative Balance Handling,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Select a customer Khata
+3) Click on Edit
+4) Update the changes
+5) Save
+","Credit Limit: -15000
+",No,Positive,"
+Block transaction",System doesn’t take negative credit limit,Pass,-,-
+TC_237,,TS_051,,Large Amount Handling,1. Khata account exists,"1) Navigate to Create Khata / Credit Book
+2) Select a customer Khata
+3) Click on Edit
+4) Update the changes
+5) Save
+","Credit Limit: 150000000
+",No,Positive,System doesn’t allow to add high credit ,System handles and rejects the high credit value,Pass,-,-
+TC_238,,TS_051,,Concurrent Update,"1. Khata account exists
+2. Two active sessions available
+Session A (Browser 1)
+Session B (Browser 2 / Incognito)","1) Navigate to Create Khata / Credit Book
+2) Login in Session A
+3) Login in Session B (same user or different authorized user)
+4) Open same Khata account in both sessions
+","Customer Name: Krishna
+phone number: 9351255643
+email: testuser01@gmail.com
+Credit limit: 1000
+Transaction A: Credit ?500
+Transaction B: Debit ?300
+",No,Edge,"System should NOT overwrite data blindly
+Final balance should be consistent based on system logic:",Sytsem updated the data succesfully,Pass,-,-
+TC_239,,TS_051,,Data Persistence,1. Khata account exists,"1) Open Khata account
+2)Add Credit ?500
+3) Save
+4) Refresh the page
+5) Add another transaction (Debit ?200)
+6) Navigate to another module (Dashboard)
+7) Return to Khata page
+8) Logout 
+9) Login again
+10) Open same khata account
+",,No,Edge,"All transactions persist
+Balance reflects latest data",Data remains as per the recent updation,Pass,-,-
+TC_240,Redeem / Coupon Redemption,TS_052,Verify coupon redemption works successfully,Verify Coupon Generation After Purchase,"1. Customer exists
+2. Active discount/coupon rule exists","1) Scan QR / initiate purchase
+2) Enter purchase details
+3) Complete transaction","Purchase Amount: ?5000
+Rule: 20% coupon, valid for next purchase",No,Positive,"
+Coupon linked to customer account
+Coupon details:
+Unique code
+Discount value
+Validity period
+","
+Coupon generated successfully",Pass,-,-
+TC_241,,TS_052,,Verify Coupon Redemption with Valid Coupon,1.Valid coupon exists,"1) Start new purchase
+2) Apply coupon code
+3) Click verify
+3) Enter Purchase Amount
+4) Redeem Coupon
+","Coupon code: SAREE-1018-MOFVZBMXMFU5
+",No,Positive,"Discount applied correctly
+Final amount updated
+Coupon marked as used/redeemed",Coupon redemption failed ,Fail,BUG_038:,Unable to redeem customer coupon
+TC_242,,TS_052,,Verify Redemption with Expired Coupon,1.Expired coupon,"1) Start new purchase
+2) Apply coupon code
+3) Click verify
+3) Enter Purchase Amount
+4) Redeem Coupon
+","Coupon code: SAREE-1018-MOFVZBMXMFU5
+",No,Positive,"System blocks redemption
+Message: “Coupon expired”",Displays an error message as Invalid or expired coupon code,Pass,-,-
+TC_243,,TS_052,,Verify Redemption with Already Used Coupon,1.Coupon already used,"1) Start new purchase
+2) Apply coupon code
+3) Click verify
+3) Enter Purchase Amount
+4) Redeem Coupon
+","Coupon code: SAREE-1018-MOFVZBMXMFU5
+",No,Negative,"Coupon cant be applied after the usage 
+",Redemption blocked,Pass,-,-
+TC_244,,TS_052,,Verify Invalid Coupon Format,1.Valid coupon exists,"1) Start new purchase
+2) Apply coupon code
+3) Click verify
+3) Enter Purchase Amount
+4) Redeem Coupon
+",Coupon: ABC123@#,No,Negative,"Validation error shown
+Coupon not applied",Displays an error message as Invalid or expired coupon code,Pass,-,-
+TC_245,,TS_052,,Verify Minimum Purchase Condition,1.Valid coupon exists,"1) Start new purchase
+2) Apply coupon code
+3) Click verify
+3) Enter Purchase Amount
+4) Redeem Coupon
+","Min amount: ?500
+Purchase: ?400",No,Negative,"Coupon not applied
+Proper message displayed",Customer doesn’t receive any discont,Pass,-,-
+TC_246,,TS_052,,Verify Maximum Discount Limit,1.Valid coupon exists,"1) Start new purchase
+2) Apply coupon code
+3) Click verify
+3) Enter Purchase Amount
+4) Redeem Coupon
+","Discount: 10%
+Max cap: ?100
+Purchase: ?2000",No,Negative,Discount capped at ?100,Customer gets only 100rs discount irrespctive of purchase,Pass,-,-
+TC_247,,TS_052,,Verify One Coupon Per Transaction Rule,1. Multiple coupon exists,"1) Start new purchase
+2) Apply coupon code
+3) Click verify
+3) Enter Purchase Amount
+4) Redeem Coupon
+","Coupon code: SAREE-1018-MOFVZBMXMFU5
+
+Coupon: ABC123@#
+",No,Negative,"Only one coupon allowed
+Others rejected",Applying second coupon rejects the redemption,Pass,-,-
+TC_248,,TS_052,,Verify Coupon Linked to Specific Customer,1.Valid coupon exists,"1) Start new purchase
+2) Apply coupon code for different customer
+3) Click verify
+3) Enter Purchase Amount
+4) Redeem Coupon
+","Coupon code: SAREE-1018-MOFVZBMXMFU5
+
+
+",No,Negative,"Redemption blocked
+Proper validation message",Coupon is not applied to other customer,Pass,-,-
+TC_249,,TS_052,,Verify Coupon Redemption Updates Dashboard,1.Valid coupon exists,"1) Redeem coupon
+2) Check dashboard","Coupon code: SAREE-1018-MOFVZBMXMFU5
+
+
+",No,Positive,Coupon usage reflected in metrics,Revenue adjusted in the dashboard,Pass,-,-
+TC_250,,TS_052,,Network Failure During Redemption,1.Valid coupon exists,"1) Apply coupon
+2) Turn off internet before confirmation","Coupon code: SAREE-1018-MOFVZBMXMFU5
+
+
+",No,Edge,Transaction not partially completed,"Coupon not consumed
+Proper error shown",Pass,-,-
+TC_251,Manage Subscription / Subscription Management,TS_053,"Verify if Subscription Management page displays plans & pricing, payment history, subscription and billing  info",Verify Subscription Management page loads successfully,User is logged in and has access to subscription page,1. Click Manage Subscription from left menu,N/A,Yes,Positive,Subscription Management page opens without error and all sections are visible,Subscription page open successfully,Pass,-,-
+TC_252,,TS_053,,Verify current subscription details are displayed correctly,User has an active subscription,1. Open Subscription Management page,N/A,No,Positive,Subscription details displays explicitely,The page shows both an active status and a cancellation scheduled message.,Fail,BUG_013, Subscription status is unclear
+TC_253,,TS_053,,Verify “View Payment History” button is visible and clickable,User has previous payment history,"1. Open page 
+2. Click View payment history",N/A,Yes,Positive,Payment history page/modal opens successfully,Button redirects to payment history modal,Pass,-,-
+TC_254,,TS_053,,Verify payment history displays correct transaction details,Payment history exists,1. Open payment history,N/A,No,Positive,Payment related info displays,Displays the previous payment history,Pass,-,-
+TC_255,,,,Verify subscription status after payment,Payment history exists,1. Open Subscription Management page,N/A,No,Positive,Subscription status displays active,No active subscription is shown even after the payment is completed.,Fail,BUG_022,Active subscription not shown after completed payment
+TC_256,,TS_053,,Verify default billing period is monthly,User opens the page first time,1. Open Subscription Management page,N/A,Yes,Positive,Monthly tab is selected by default,System displays the current payment plan,Pass,-,-
+TC_257,,TS_054,Verify that the user/shop owner can update or manage subscription plans,Verify switching billing period to quarterly,User is on Subscription page,Click Quarterly billing period,N/A,No,Positive," Quarterly billing period	 details visible",Quarterly payment plan details displays successfully,Pass,-,-
+TC_258,,TS_054,,"	Verify switching billing period to yearly",User is on Subscription page,Click yearly billing period,N/A,No,Positive,Plan prices and plan details update according to yearly billing cycle,Yearly payment plan details displayed,Pass,-,-
+TC_259,,TS_054,,Verify upgrade button is visible for higher plan,User is on lower plan than Premium,Open pricing section and observe Premium card,N/A,Yes,Positive,Upgrade button is visible on eligible plan,Upgrade is vicible and clickable,Pass,-,-
+TC_260,,TS_054,,Verify change plan button works for Standard plan,"	User is eligible to move to Standard plan",Click Change plan on Standard plan,N/A,No,Positive,User is redirected to payment or confirmation flow for Standard plan,User able to upgrade to the standard plan ,Pass,-,-
+TC_261,,TS_054,,Verify upgrade to Premium plan initiates payment flow,"	User is eligible for upgrade",Click Upgrade on Premium plan,N/A,Yes,Positive,Upgrade payment flow opens with correct plan and price details,User able to change the permium plan ,Pass,-,-
+TC_262,,TS_054,,Verify current plan card shows renewal date correctly,Active subscription exists,Open current plan section,N/A,No,Positive,Renewal date matches actual subscription cycle date,Renewal date displays accurately,Pass,-,-
+TC_263,,TS_054,,Verify cancellation option is visible for active subscription,User has active plan,Open current plan section,N/A,No,Positive,Cancel Subscription button is visible,User navigates to cancel subscription,Pass,-,-
+TC_264,,TS_054,,Verify cancel subscription opens confirmation popup,Active subscription exists,Click Cancel Subscription,N/A,No,Positive,"Confirmation dialog appears before cancellation is processed		",Cancel confirmation is visible and clickable,Pass,-,-
+TC_265,,TS_055,Verify contact support email functionality works ,Verify contact support email functionality works,User is logged in and support email is configured,Click support email link or trigger contact support action,N/A,No,Positive,Page opens or support email action is triggered correctly with the configured email address,Clicking on email link redirects to email page,Pass,-,-
+TC_266,Profile ,TS_056,Verify if the system displays the shop owner profile info,Verify Profile page loads successfully,User is logged in as Shop Owner,Click Profile from left menu,N/A,Yes,Positive,Profile dashboard loads successfully without error,User profile info page loads successfully,Pass,-,-
+TC_267,,TS_056,,"Verify profile header displays owner name, role, and avatar",User profile exists,Open My Profile page,N/A,Yes,Positive,"Owner name, role badge, and profile image are displayed correctly",All details displayed accurately,Pass,-,-
+TC_268,,TS_056,,Verify Profile Info accepts invalida data,"	User opens Profile page",Open My Profile page,N/A,No,Negative,Profile Information tab is selected by default and personal/business/address fields are visible,System rejects invalid data,Pass,-,-
+TC_269,,TS_056,,Verify tab navigation and logout work correctly,User is logged in,"Click Logout and Login again, open the User profile page",N/A,No,Positive,Tabs open correctly and user is logged out successfully,Profile page loads without any change,Pass,-,-
+TC_270,,TS_057,Verify if shop owner can update their personal info,"	Verify email field is non-editable and phone/pincode accept valid input",User is on Profile Information tab,"Try editing Email field, then update Phone Number and Pincode with valid values","Phone number: 9340098912
+Pincode: 500023",Yes,Positive,"Email remains read-only, and valid phone/pincode are accepted successfully",User unble to edit the email and phone number fields,Pass,-,-
+TC_271,,TS_057,,Verify after edited fields can be dicarded by cancellation,User is on Profile Information tab,"Try editing all fields, then click on Cancel button","Phone number: 9340098912
+Pincode: 500024",Yes,Positive,Chnages has been discarded,Chnges were not updated,Pass,-,-
+TC_272,,TS_058,,Verify image upload validation,User is on Profile Information tab,Try to upload invalid file format,N/A,No,Positive,Png file format with specified file size is accepted,System uploads svg file ,Fail,BUG_006,Logo accepts invalid file format
+TC_273,,TS_057,,Verify leaving fields empty,User is on Profile Information tab,Leave all the mandatory fields empty,N/A,Yes,Positive,System shows error message to fill all the required fields,User profile is not updated,Pass,-,-
+TC_274,Customers,TS_058,Verify that the user/shop owner can view the customer database and all metrics,Verify Customers page loads with summary metrics and customer list,User/shop owner is logged in,Open Customers module,N/A,Yes,Positive,"Page loads successfully and all key metrics, filters, search, and customer table are visible",Customers page opens and displays metrics accurately,Pass,-,-
+TC_275,,TS_058,,Verify customer metrics show correct values,"	Customer data exists",Compare displayed metrics with available customer data,N/A,No,Positive,Customer page shows database with correct values,All customers data appeared on display,Pass,-,-
+TC_276,,TS_058,,Verify customer search works with valid input,Customer records exist,"Search by valid phone number, name, or email",Mobile: 9494994694,Yes,Positive,Matching customer records are filtered and displayed correctly,Customer account displays with valida data,Pass,-,-
+TC_277,,TS_058,,Verify search with no matching result,Customers page is open,Search with a non-existing name or number,Mobile: 94r564694,Yes,Positive,No matching records are shown and user gets a proper empty-state response,No results displays,Pass,-,-
+TC_278,,TS_058,,Verify customer category filters work,"	Customer records exist","Click filters such as All Customers, Scanned Today, Open Khata, Active Passes, Got Discount",N/A,No,Positive,Table updates correctly according to selected filter,Switching tabs display related data info properly,Pass,-,-
+TC_279,,TS_058,,Verify customer list handles edge record values,Test data includes guest/zero visit/zero spend records,Open customer table and observe edge records,N/A,No,Edge,"Customers with zero visits, guest users, or zero spent values are displayed without breaking layout",System gracefully handles the pages with no data,Pass,-,-
+TC_280,Analytics / Reports,TS_059,Verify that the user/shop owner can view business analytics based on filters,"	Verify Analytics & Reports page loads successfully	",User/shop owner is logged in,Open Analytics/Reports module,N/A,Yes,Positive,"Dashboard loads successfully and summary cards, charts, and store/customer sections are visible",Analytics Page displays entire businesss performance metrics,Pass,-,-
+TC_281,,TS_059,,Verify analytics summary cards show correct values,Analytics data exists,"Compare total revenue, transactions, customers, and discounts",N/A,No,Positive,Summary cards show correct metrics and formatting,The business data matches accurately,Pass,-,-
+TC_282,,TS_059,,Verify revenue trend changes with date filter,Analytics data exists,"Switch between 7 Days, 30 Days, and 90 Days filters",N/A,No,Negative,Revenue trend chart refreshes according to selected filter,"Only the charts update when time filters are applied. Summary metrics remain fixed on ""This month.""",Fail,BUG_005,Analytics filters don't update summary metrics
+TC_283,,TS_059,,Verify store performance chart displays correctly,Store data exists,Open Store Performance section,N/A,No,Positive,Chart loads correctly and shows store-wise performance without UI issues,Charts displays store wise performance accurately,Pass,-,-
+TC_284,,TS_059,,Verify analytics handles empty or low-data boundary cases,"	Very little or no analytics data exists for a store",Open Analytics/Reports with low-data store,N/A,No,Positive,Page shows zero/blank-safe values without crashing or showing invalid charts,Page loads successfully without any UI issues,Pass,-,-
+TC_285,,TS_059,,Verify analytics remains stable on rapid filter switching,Analytics page is open,"Click 7 Days, 30 Days, and 90 Days repeatedly",N/A,No,Positive," 7 Days, 30 Days and 90 Days repeatedly	","Data updates correctly without lag, overlap, or wrong values",Pass,-,-
+TC_286,Raise Ticket,TS_060,Verify that the user/shop owner can raise a support ticket successfully,Verify Raise Ticket page loads successfully,User/shop owner is logged in,Open Raise Ticket module,N/A,Yes,Positive," Raise Ticket module	Support form loads successfully with all fields visible",Support page displays all fields properly,Pass,-,-
+TC_287,,TS_060,,Verify ticket can be submitted with valid data,All mandatory fields are available,"1) Enter valid name, email, phone, issue type, and message
+2) Click Submit Ticket","Name: Rakesh
+Email: testuser01@gmail.com
+",Yes,Positive,Ticket is submitted successfully and confirmation is shown,Success message appears and ticket ID sent to the user,Pass,-,-
+TC_288,,TS_060,,Verify ticket submission handles edge case of repeated click / slow network,Form is filled with valid data,1) Click Submit Ticket multiple times or simulate slow response,N/A,No,Edge,Duplicate ticket is not created and user gets only one successful submission response,Ticket form accepts invalid data,Fail,BUG_056,Phone number fields accepts (0-5) starting values
